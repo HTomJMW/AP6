@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NATO_Player.et" {
+SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_US_USMC_Player.et" {
  ID "5242B7AE16596FB8"
  components {
   FactionAffiliationComponent "{520EC961FB0A2E90}" {
@@ -24,7 +24,7 @@ SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NAT
    WeaponTemplate "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   WeaponTemplate "{D2C367D173B99BCC}Prefabs/Weapons/Rifles/M4A1/Rifle_M4_RAS.et"
+   WeaponTemplate "{068C2EB42635973F}Prefabs/Weapons/Rifles/M4A1/Rifle_M4A1_RAS.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
    WeaponTemplate "{E998FA484B0C4BFF}Prefabs/Weapons/Handguns/Glock/Handgun_Glock17.et"

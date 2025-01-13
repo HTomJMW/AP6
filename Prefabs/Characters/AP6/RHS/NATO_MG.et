@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NATO_Player.et" {
+SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_US_USMC_Player.et" {
  ID "5242B7AE16596FB8"
  components {
   FactionAffiliationComponent "{520EC961FB0A2E90}" {

@@ -8,6 +8,8 @@ class SCR_AP6_GameMode : SCR_BaseGameMode
 	[Attribute(defvalue: "true", uiwidget: UIWidgets.CheckBox, desc: "Enables defender AIs near flags.", category: "AP6 GameMode")]
 	protected bool m_EnableAIs;
 	
+	protected string version = "0.7.11";
+	
 	protected ref array<SCR_AP6_Flag> m_flags = {};
 	
 	protected ref map<int, int> m_playersDeathTimes = new map<int, int>();
@@ -53,7 +55,7 @@ class SCR_AP6_GameMode : SCR_BaseGameMode
 		{
 			StartGameMode();
 			PrintFormat("AP6 :: GameMode running: %1", IsRunning().ToString());
-			Print("AP6 :: Mission version: 0.7.10");
+			Print("AP6 :: Mission version: " + version);
 
 			if (RplSession.Mode() == RplMode.Dedicated)
 			{
@@ -62,32 +64,6 @@ class SCR_AP6_GameMode : SCR_BaseGameMode
 				Print("AP6 :: Server: Player-Hosted");
 			}
 		}
-		
-		// For discord BOT
-		Print("Mission: AP6 v0.7.10");
-		
-		BaseWorld world = GetGame().GetWorld();
-		if (!world) return;
-		world.QueryEntitiesBySphere(world.FindEntityByName("Flag_5").GetOrigin(), 35, RemoveEntities, FilterEntities, EQueryEntitiesFlags.STATIC);
-		world.UpdateEntities();
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	bool RemoveEntities(IEntity ent)
-	{
-		ent.SetOrigin("0 0 0");
-	
-		return true;
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	bool FilterEntities(IEntity ent)
-	{
-		if (!ent) return false;
-	
-		if (ent.Type() == (typename)Tree || ent.GetPrefabData().GetPrefabName() == "{926C09375D2DAA4D}PrefabLibrary/Rocks/Granite/GraniteStone_01.et" || ent.GetPrefabData().GetPrefabName() == "{1BA4712EED0CB208}PrefabLibrary/Rocks/Granite/GraniteStone_03.et") return true;
-		
-		return false;
 	}
 	
 	//------------------------------------------------------------------------------------------------

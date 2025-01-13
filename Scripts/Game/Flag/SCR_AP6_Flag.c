@@ -30,9 +30,12 @@ class SCR_AP6_Flag : GenericEntity
 		m_slotManagerComp = SlotManagerComponent.Cast(owner.FindComponent(SlotManagerComponent));
 		EntitySlotInfo slot = m_slotManagerComp.GetSlotByName("SpawnPoint");
 		m_spawnPoint = SCR_SpawnPoint.Cast(slot.GetAttachedEntity());
-		m_spawnPoint.SetSpawnPointName("SpawnPoint");
-		m_spawnPoint.SetFactionKey(m_ownerFactionKey);
-		m_spawnPoint.SetSpawnRadius(12);
+		if (m_spawnPoint)
+		{
+			m_spawnPoint.SetSpawnPointName("SpawnPoint");
+			m_spawnPoint.SetFactionKey(m_ownerFactionKey);
+			m_spawnPoint.SetSpawnRadius(12);
+		}
 		
 		m_mapDescriptor = SCR_MapDescriptorComponent.Cast(owner.FindComponent(SCR_MapDescriptorComponent));
 		initMarker();
@@ -88,7 +91,7 @@ class SCR_AP6_Flag : GenericEntity
 	{
 		m_ownerFactionKey = newFactionKey;
 		changeFlag(newFactionKey);
-		m_spawnPoint.SetFactionKey(newFactionKey);
+		if (m_spawnPoint) m_spawnPoint.SetFactionKey(newFactionKey);
 		changeMarkerColor(m_ownerFactionKey);
 		
 		Replication.BumpMe();
@@ -135,7 +138,7 @@ class SCR_AP6_Flag : GenericEntity
 		
 		MapDescriptorProps props = mapItem.GetProps();
 			props.SetDetail(96);
-			props.SetIconSize(1.25, 1, 1);
+			props.SetIconSize(0.35, 1, 1);
 			props.SetTextSize(16, 8, 32);
 			props.SetTextColor(fm.GetFactionByKey(m_ownerFactionKey).GetFactionColor());
 			props.SetFrontColor(fm.GetFactionByKey(m_ownerFactionKey).GetFactionColor());
@@ -173,7 +176,7 @@ class SCR_AP6_Flag : GenericEntity
 		if (item)
 		{
 			MapDescriptorProps props = item.GetProps();
-				props.SetIconSize(1.25, -currentZoom * 1.25, -currentZoom * 1.25);
+				props.SetIconSize(0.35, -currentZoom * 0.35, -currentZoom * 0.35);
 			
 			item.SetProps(props);
 		}

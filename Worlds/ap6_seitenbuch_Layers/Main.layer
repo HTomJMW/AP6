@@ -731,7 +731,7 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
   }
   SCR_NotificationSenderComponent "{627D1B779080DC99}" {
    m_iKillFeedType FULL
-   m_iReceiveKillFeedType ALL
+   m_iReceiveKillFeedType SAME_FACTION_ONLY
    m_aKillfeedTypeNames {
     SCR_NotificationKillfeedTypeName "{627D1B779080C57F}" {
      m_iKillfeedType DISABLED
@@ -1524,7 +1524,7 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
   }
   SCR_RespawnBriefingComponent "{628CF6EA08B9335F}" {
    m_Info SCR_UIInfo "{628CF6EA0216F70B}" {
-    Name "Arma Reforger AP6 v0.7.10"
+    Name "Arma Reforger AP6 v0.7.11"
     Description "by [H] Tom"
     Icon "{3C50D67D082BA322}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_2_UI.edds"
    }
@@ -3959,6 +3959,15 @@ SCR_CampaignFactionManager CampaignFactionManager {
           }
          }
         }
+        SCR_EntityCatalogInventoryItem "{645114A30D635949}" {
+         m_sEntityPrefab "{7701C6F717D852C6}Prefabs/Weapons/Rifles/AK74M/Rifle_AK74M_npz_rail_camo.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114A3721CE6F9}" {
+           m_eItemMode WEAPON
+           m_iSupplyCost 0
+          }
+         }
+        }
         SCR_EntityCatalogInventoryItem "{628D166A9F176F82}" {
          m_sEntityPrefab "{3FA38ECE65392FC3}Prefabs/Weapons/Rifles/AKS74UN/Rifle_AKS74UN.et"
          m_aEntityDataList {
@@ -4830,6 +4839,76 @@ SCR_CampaignFactionManager CampaignFactionManager {
           }
          }
         }
+        SCR_EntityCatalogInventoryItem "{645114B6AFB60F59}" {
+         m_sEntityPrefab "{BEE53E42411B8FFA}Prefabs/Weapons/Attachments/Optics/bravo4/Optic_bravo4_blk.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B6AFB60FB0}" {
+           m_eItemType WEAPON_ATTACHMENT
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114B69707D79D}" {
+         m_sEntityPrefab "{D0453107F44917CF}Prefabs/Weapons/Attachments/Optics/exps/Optic_su231A_black.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B69707D7DC}" {
+           m_eItemType WEAPON_ATTACHMENT
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114B687E02CE9}" {
+         m_sEntityPrefab "{67F7BD007D153A98}Prefabs/Weapons/Attachments/Optics/exps/Optic_su231A_camo.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B687E02D2A}" {
+           m_eItemType WEAPON_ATTACHMENT
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114B680F8F5A0}" {
+         m_sEntityPrefab "{DA2AED4A5F958164}Prefabs/Weapons/Attachments/Optics/su230/Optic_SU230.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B680F8F5EF}" {
+           m_eItemType WEAPON_ATTACHMENT
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114B6CB8AF2BE}" {
+         m_sEntityPrefab "{7DB681643152613C}Prefabs/Weapons/Attachments/Optics/su230/Optic_SU230_MRDS.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B6CB8AF30C}" {
+           m_eItemType WEAPON_ATTACHMENT
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114B6C53C6EB3}" {
+         m_sEntityPrefab "{2518CA6044D6BBDD}Prefabs/Weapons/Attachments/Optics/ta31rco/Optic_TA31RCO.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B6C53C6EF3}" {
+           m_eItemType WEAPON_ATTACHMENT
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114B63BC21C52}" {
+         m_sEntityPrefab "{90A20A1ED92AD477}Prefabs/Weapons/Attachments/Optics/ta31rco/Optic_TA31RCO_ARD.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B63BC21C93}" {
+           m_eItemType WEAPON_ATTACHMENT
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
        }
       }
       SCR_EntityCatalogMultiListEntry "{627D1B7E80243EAF}" {
@@ -4877,7 +4956,7 @@ SCR_CampaignFactionManager CampaignFactionManager {
        m_sIdentifier "Equipment"
        m_aEntities {
         SCR_EntityCatalogInventoryItem "{628D51DC6B127FD8}" {
-         m_sEntityPrefab "{8A89D3F70713E55B}Prefabs/Items/Equipment/Accessories/ETool_MPL50/ETool_MPL50.et"
+         m_sEntityPrefab "{062E2F1D7F6739D6}Prefabs/Items/Equipment/Accessories/ETool_MPL50/ETool_MPL50_FreeRoamBuilding_Gadget.et"
          m_aEntityDataList {
           SCR_ArsenalItem "{628D51DDB992A1CC}" {
            m_eItemType EQUIPMENT
@@ -5097,9 +5176,45 @@ SCR_CampaignFactionManager CampaignFactionManager {
           }
          }
         }
+        SCR_EntityCatalogInventoryItem "{645114AC18952F7E}" {
+         m_sEntityPrefab "{20CFD20350444288}Prefabs/Characters/Vests/Vest_Ratnik_6B45/Variants/Vest_Ratnik_6B45_rifleman.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AC07D28225}" {
+           m_eItemType VEST_AND_WAIST
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114AE21DD04D0}" {
+         m_sEntityPrefab "{915E9D97CFAB02D6}Prefabs/Characters/Vests/Vest_Ratnik_6B45/Variants/Vest_Ratnik_6B45_officer.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AE039B607C}" {
+           m_eItemType VEST_AND_WAIST
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114AF25E2A07B}" {
+         m_sEntityPrefab "{E711752AC6D2123D}Prefabs/Characters/Vests/Vest_Ratnik_6B45/Variants/Vest_Ratnik_6B45_officer_GL.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AF0ED0B38A}" {
+           m_eItemType VEST_AND_WAIST
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114ACE61FB85C}" {
+         m_sEntityPrefab "{290EB58C0B52EB1C}Prefabs/Characters/Vests/Vest_Ratnik_6B45/Variants/Vest_Ratnik_6B45_GL.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114ACCB80DF42}" {
+           m_eItemType VEST_AND_WAIST
+           m_iSupplyCost 0
+          }
+         }
+        }
         SCR_EntityCatalogInventoryItem "{6291176A096FBC0A}" {
          m_sEntityPrefab "{FB4339B483CACFC0}Prefabs/Characters/Vests/Vest_Ratnik_6B45/Vest_Ratnik_6B45_folded_collar.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{6291176BA61DCB47}" {
            m_eItemType VEST_AND_WAIST
@@ -5109,7 +5224,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{6291176BBBC4E785}" {
          m_sEntityPrefab "{7EEFC3B2DCEAFAF3}Prefabs/Characters/Vests/Vest_Ratnik_6B45/Vest_Ratnik_6B45_folded_neck.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{6291176B8FE70F21}" {
            m_eItemType VEST_AND_WAIST
@@ -5117,9 +5231,83 @@ SCR_CampaignFactionManager CampaignFactionManager {
           }
          }
         }
+        SCR_EntityCatalogInventoryItem "{645114AF7DFED5A0}" {
+         m_sEntityPrefab "{CCB46533102B7298}Prefabs/Characters/Vests/Vest_Ratnik_6B45/Variants/Vest_Ratin6B45_BebraPKM_1.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AF6BAD2CFE}" {
+           m_eItemType VEST_AND_WAIST
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114AEDB5BB219}" {
+         m_sEntityPrefab "{6B750632582934E5}Prefabs/Characters/Vests/Vest_Ratnik_Pouches/Pouch_Ratnik_azart_pouch.et"
+         m_bEnabled 0
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AED07AEAAF}" {
+           m_eItemType VEST_AND_WAIST
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114AEB8974624}" {
+         m_sEntityPrefab "{722C8E77D7AE3941}Prefabs/Characters/Vests/Vest_Ratnik_Pouches/Pouch_Ratnik_ak_1_pouch.et"
+         m_bEnabled 0
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AEAEF3952D}" {
+           m_eItemType VEST_AND_WAIST
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114ADB9DB0B00}" {
+         m_sEntityPrefab "{EE9D33AFBDABF119}Prefabs/Characters/Vests/Vest_Ratnik_Pouches/Pouch_Ratnik_ak_2_pouch.et"
+         m_bEnabled 0
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114ADA93EEB55}" {
+           m_eItemType VEST_AND_WAIST
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114AEF0BC1232}" {
+         m_sEntityPrefab "{109D73EA48F99D55}Prefabs/Characters/Vests/Vest_Ratnik_Pouches/Pouch_Ratnik_ak_3_pouch.et"
+         m_bEnabled 0
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AEE7A7D9AB}" {
+           m_eItemType VEST_AND_WAIST
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114ADED0E9B55}" {
+         m_sEntityPrefab "{633CEDB33257ACA6}Prefabs/Characters/Vests/Vest_Ratnik_Pouches/Pouch_Ratnik_vog_pouches.et"
+         m_bEnabled 0
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114ADDE660FC7}" {
+           m_eItemType VEST_AND_WAIST
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114AD28ABB12D}" {
+         m_sEntityPrefab "{ADF17AE969E9C691}Prefabs/Characters/Vests/Vest_Ratnik_Pouches/Pouch_Ratnik_appi_pouch.et"
+         m_bEnabled 0
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AD1F05CC30}" {
+           m_eItemType VEST_AND_WAIST
+           m_eItemMode ATTACHMENT
+           m_iSupplyCost 0
+          }
+         }
+        }
         SCR_EntityCatalogInventoryItem "{6291176BBD076BC5}" {
          m_sEntityPrefab "{CAEDE923EF4071AE}Prefabs/Items/Equipment/Backpacks/Backpack_Suharka_type1.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{62911768194C9C0E}" {
            m_eItemType BACKPACK
@@ -5182,7 +5370,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
        m_aEntities {
         SCR_EntityCatalogInventoryItem "{628D1677FE3AA399}" {
          m_sEntityPrefab "{03FF161D3AC1E1DF}Prefabs/Characters/Uniforms/VKPO/Field_Jacket_VKPO.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D16766E9A652D}" {
            m_eItemType TORSO
@@ -5192,7 +5379,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D1677FDBACB99}" {
          m_sEntityPrefab "{8EF93CC5575CFD4B}Prefabs/Characters/Uniforms/VKPO/Field_Pants_VKPO.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D167658E64B71}" {
            m_eItemType LEGS
@@ -5242,7 +5428,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D1677F55C7F2C}" {
          m_sEntityPrefab "{34B3B2E5CC452F8A}Prefabs/Characters/Uniforms/VKPO/Undershirt_Demiseason_VKPO.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D1675A47A31C5}" {
            m_eItemType TORSO
@@ -5252,7 +5437,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D1677F453D68D}" {
          m_sEntityPrefab "{C4D2963435559DD6}Prefabs/Characters/Uniforms/VKPO/Undershirt_Summer_VKPO.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D16759D7A4E1F}" {
            m_eItemType TORSO
@@ -5262,7 +5446,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D1677F3276A6A}" {
          m_sEntityPrefab "{BB68DC18E1C571D8}Prefabs/Characters/Uniforms/VKPO/Undershirt_VKPO.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D16759460A16B}" {
            m_eItemType TORSO
@@ -5272,7 +5455,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D1677F243D4B2}" {
          m_sEntityPrefab "{CB0BD640ADB46F26}Prefabs/Characters/Uniforms/VKPO/Undershorts_VKPO.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D16758A4CAE55}" {
            m_eItemType LEGS
@@ -5331,7 +5513,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D1677EDE414F7}" {
          m_sEntityPrefab "{45990536E93CA54A}Prefabs/Characters/Uniforms/Jacket_VKPO.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D16753C49658E}" {
            m_eItemType TORSO
@@ -5370,7 +5551,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D1676DE15C157}" {
          m_sEntityPrefab "{36C06BDF4F6F212B}Prefabs/Characters/Uniforms/Pants_VKPO.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D16751CD249C5}" {
            m_eItemType LEGS
@@ -8194,7 +8374,7 @@ SCR_CampaignFactionManager CampaignFactionManager {
          }
         }
         SCR_EntityCatalogInventoryItem "{628D166696966CB5}" {
-         m_sEntityPrefab "{7BD5C0FC31E546E1}Prefabs/Weapons/MachineGuns/M249/MG_M249_RIS_Base.et"
+         m_sEntityPrefab "{BAE271374368C0D6}Prefabs/Weapons/MachineGuns/M249/MG_M249_RISTop_Base.et"
          m_aEntityDataList {
           SCR_ArsenalItem "{628D1666F5CA8131}" {
            m_eItemType MACHINE_GUN
@@ -8684,6 +8864,36 @@ SCR_CampaignFactionManager CampaignFactionManager {
           }
          }
         }
+        SCR_EntityCatalogInventoryItem "{645114B4E3EB859F}" {
+         m_sEntityPrefab "{75632A0CA07D3817}Prefabs/Weapons/Magazines/Box_762x51_M60_100rnd_AP.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B4C605F025}" {
+           m_eItemType MACHINE_GUN
+           m_eItemMode AMMUNITION
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114B5B6F60450}" {
+         m_sEntityPrefab "{AAF51CFA75A9CF8B}Prefabs/Weapons/Magazines/Box_762x51_M60_100rnd_4AP_1Tracer.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B5B6F60490}" {
+           m_eItemType MACHINE_GUN
+           m_eItemMode AMMUNITION
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114B43CDC7756}" {
+         m_sEntityPrefab "{AD8AB93729348C3E}Prefabs/Weapons/Magazines/Box_762x51_M60_100rnd_Tracer.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114B43CDC779C}" {
+           m_eItemType MACHINE_GUN
+           m_eItemMode AMMUNITION
+           m_iSupplyCost 0
+          }
+         }
+        }
         SCR_EntityCatalogInventoryItem "{628D167BD1D45EFD}" {
          m_sEntityPrefab "{0244BAD13DBCC9FE}Prefabs/Weapons/Ammo/MK153/RHS_AmmoRocket_MK153_HEDP.et"
          m_aEntityDataList {
@@ -8966,7 +9176,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D16782756DFEC}" {
          m_sEntityPrefab "{3343A055A83CB30D}Prefabs/Weapons/Grenades/M18/Smoke_M18_Red.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D16784691560A}" {
            m_eItemType NON_LETHAL_THROWABLE
@@ -8976,7 +9185,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D167826656007}" {
          m_sEntityPrefab "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D1677B58ABC3C}" {
            m_eItemType NON_LETHAL_THROWABLE
@@ -8986,9 +9194,17 @@ SCR_CampaignFactionManager CampaignFactionManager {
         }
         SCR_EntityCatalogInventoryItem "{628D1678269B8A34}" {
          m_sEntityPrefab "{9BBDEE253A16CC66}Prefabs/Weapons/Grenades/M18/Smoke_M18_Yellow.et"
-         m_bEnabled 0
          m_aEntityDataList {
           SCR_ArsenalItem "{628D1677A54D0747}" {
+           m_eItemType NON_LETHAL_THROWABLE
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114ABA540AE32}" {
+         m_sEntityPrefab "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114ABA540AE7D}" {
            m_eItemType NON_LETHAL_THROWABLE
            m_iSupplyCost 0
           }
@@ -9000,7 +9216,7 @@ SCR_CampaignFactionManager CampaignFactionManager {
        m_sIdentifier "Equipment"
        m_aEntities {
         SCR_EntityCatalogInventoryItem "{628D571AB0D14DB1}" {
-         m_sEntityPrefab "{0619993AE6CDBF85}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE.et"
+         m_sEntityPrefab "{6E35D94130954509}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE_FreeRoamBuilding_Gadget.et"
          m_aEntityDataList {
           SCR_ArsenalItem "{628D571A92B832C6}" {
            m_eItemType EQUIPMENT
@@ -9260,6 +9476,33 @@ SCR_CampaignFactionManager CampaignFactionManager {
          m_sEntityPrefab "{1300A5F6CA51B206}Prefabs/Characters/Vests/Vest_PCGen_III/Vest_PCGen_III.et"
          m_aEntityDataList {
           SCR_ArsenalItem "{62911C95D03514C8}" {
+           m_eItemType VEST_AND_WAIST
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114AA2730530F}" {
+         m_sEntityPrefab "{1300A5F6CA51B204}Prefabs/Characters/Vests/Vest_PCGen_III/Variants/Vest_PCGen_III_rifleman.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AA119BB9EF}" {
+           m_eItemType VEST_AND_WAIST
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114AA0B3C5AD8}" {
+         m_sEntityPrefab "{A0AC1CF48F497984}Prefabs/Characters/Vests/Vest_PCGen_III/Variants/Vest_PCGen_III_Officer.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AA0B3C5B4D}" {
+           m_eItemType VEST_AND_WAIST
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{645114AA79AC6DE2}" {
+         m_sEntityPrefab "{68CF844B606428D8}Prefabs/Characters/Vests/Vest_PCGen_III/Vest_PCGen_III_light.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{645114AA79AC6E2D}" {
            m_eItemType VEST_AND_WAIST
            m_iSupplyCost 0
           }
@@ -15769,477 +16012,6 @@ ItemPreviewManagerEntity ItemPreviewManagerEntity {
  DefaultRenderAttributes PreviewRenderAttributes "{627D1B76994AC474}" {
  }
 }
-$grp PolylineShapeEntity {
- {
-  coords 2172.789 430.462 1110.5
-  Points {
-   ShapePoint "{628AB6E9A054438D}" {
-    Position -41.269 3.678 -5.308
-   }
-   ShapePoint "{628AB6E9811C6F1B}" {
-    Position -33.229 3.532 0.343
-   }
-   ShapePoint "{628AB6E9A06AF788}" {
-    Position -16.269 3.069 10.8
-   }
-   ShapePoint "{628AB6E9F96C71D8}" {
-    Position -2.385 2.844 18.43
-   }
-   ShapePoint "{628AB6E99AFE6B98}" {
-    Position 10.711 2.685 24.354
-   }
-   ShapePoint "{628AB6E9997D2216}" {
-    Position 28.857 2.207 30.851
-   }
-  }
-  LineColor 0 0 0 0
-  {
-   WallGeneratorEntity : "{4CA251EBE9778336}PrefabLibrary/Generators/Walls/Concrete/WG_ConcreteWall_01.et" {
-    coords 0 0 0
-    Flags 1048579
-    {
-     SCR_DestructibleEntity : "{398A34BD4D1D0873}Prefabs/Structures/Walls/Concrete/ConcreteWall_01/ConcreteWall_01_camo_6m_D_B.et" {
-      coords 9.791 2.697 23.94
-      angleY -19.925
-     }
-     SCR_DestructibleEntity : "{47F1F31525B3171C}PrefabLibrary/Walls/Concrete/ConcreteWall_01_6m_D_B.et" {
-      coords -24.059 3.278 5.967
-      angleY -31.819
-     }
-     $grp SCR_DestructibleEntity : "{55DE005DF1D9875D}Prefabs/Structures/Walls/Concrete/ConcreteWall_01/ConcreteWall_01_camo_6m_D_A.et" {
-      {
-       coords -3.618 2.864 17.761
-       angleY -24.708
-      }
-      {
-       coords 15.369 2.554 25.962
-       angleY -19.925
-      }
-     }
-     SCR_DestructibleEntity : "{95A1D31077D47BEA}PrefabLibrary/Walls/Concrete/ConcreteWall_01_Pole.et" {
-      coords 26.512 2.267 30.001
-      angleY -19.925
-     }
-     SCR_DestructibleEntity : "{A968F1BDCB2595BD}Prefabs/Structures/Walls/Concrete/ConcreteWall_01/ConcreteWall_01_camo_6m_B.et" {
-      coords -16.547 3.075 10.634
-      angleY -28.833
-     }
-     $grp SCR_DestructibleEntity : "{C53CC55D77E11A93}Prefabs/Structures/Walls/Concrete/ConcreteWall_01/ConcreteWall_01_camo_6m_A.et" {
-      {
-       coords -41.357 3.68 -5.37
-       angleY -35.106
-      }
-      {
-       coords -34.128 3.549 -0.281
-       angleY -31.819
-      }
-      {
-       coords -11.359 2.99 13.49
-       angleY -28.833
-      }
-      {
-       coords 1.763 2.796 20.236
-       angleY -24.708
-      }
-      {
-       coords 20.937 2.411 27.98
-       angleY -19.925
-      }
-     }
-     $grp SCR_DestructibleEntity : "{C84262844F1BE9EE}Prefabs/Structures/Walls/Concrete/ConcreteWall_01/ConcreteWall_01_camo_3m.et" {
-      {
-       coords -19.023 3.143 9.091
-       angleY -31.819
-      }
-      {
-       coords -6.17 2.906 16.347
-       angleY -28.833
-      }
-     }
-     $grp SCR_DestructibleEntity : "{CAFF4B51059A0F81}PrefabLibrary/Walls/Concrete/ConcreteWall_01_3m.et" {
-      {
-       coords -36.512 3.592 -1.964
-       angleY -35.106
-      }
-      {
-       coords 7.144 2.729 22.712
-       angleY -24.708
-      }
-     }
-     SCR_DestructibleEntity : "{D242B6296793D56E}PrefabLibrary/Walls/Concrete/ConcreteWall_01_D.et" {
-      coords -29.096 3.414 2.841
-      angleY -31.819
-     }
-    }
-   }
-  }
- }
- {
-  coords 2152.753 433.604 1128.584
-  Points {
-   ShapePoint "{628AB6E376FE8347}" {
-    Position -37.77 1.223 -21.058
-   }
-   ShapePoint "{628AB6E3749F7645}" {
-    Position -45.187 3.004 -5.683
-   }
-   ShapePoint "{628AB6E5C64233D5}" {
-    Position -50.117 4.525 15.989
-   }
-   ShapePoint "{628AB6E373C8AF18}" {
-    Position -44.257 4.79 21.223
-   }
-   ShapePoint "{628AB6E28E8E0283}" {
-    Position -15.978 6.103 41.365
-   }
-  }
-  LineColor 0 0 0 0
-  {
-   WallGeneratorEntity : "{55A3B9EDA50846BB}PrefabLibrary/Generators/Walls/Net/WG_NetFence_03.et" {
-    coords 0 0 0
-    Flags 1048579
-    {
-     $grp SCR_DestructibleEntity : "{168CE46092EAD301}PrefabLibrary/Walls/Net/NetFence_03_4m.et" {
-      {
-       coords -42.964 2.47 -10.29
-       angleY -115.753
-      }
-      {
-       coords -48.41 4.009 8.845
-       angleY -103.435
-      }
-      {
-       coords -21.861 5.828 37.139
-       angleY -35.689
-      }
-     }
-     SCR_DestructibleEntity : "{25E7C831EF87A0E1}PrefabLibrary/Walls/Net/NetFence_03_Pole.et" {
-      coords -16.975 6.056 40.649
-      angleY -35.689
-     }
-     $grp SCR_DestructibleEntity : "{664176B900CE86B2}PrefabLibrary/Walls/Net/NetFence_03_2m.et" {
-      {
-       coords -49.34 4.29 12.736
-       angleY -103.435
-      }
-      {
-       coords -18.606 5.98 39.477
-       angleY -35.689
-      }
-     }
-     $grp SCR_DestructibleEntity : "{C378176AB614B1FD}PrefabLibrary/Walls/Net/NetFence_03_4m_D.et" {
-      {
-       coords -41.232 2.054 -13.882
-       angleY -115.753
-      }
-      {
-       coords -44.627 4.766 20.787
-       angleY -35.689
-      }
-      {
-       coords -41.372 4.918 23.125
-       angleY -35.689
-      }
-      {
-       coords -38.118 5.07 25.463
-       angleY -35.689
-      }
-     }
-     $grp SCR_DestructibleEntity : "{F717C1D3B6A27867}PrefabLibrary/Walls/Net/NetFence_03_8m.et" {
-      {
-       coords -37.77 1.223 -21.058
-       angleY -115.753
-      }
-      {
-       coords -44.697 2.886 -6.698
-       angleY -103.435
-      }
-      {
-       coords -46.554 3.448 1.074
-       angleY -103.435
-      }
-      {
-       coords -49.806 4.431 14.686
-       angleY -49.674
-      }
-      {
-       coords -34.863 5.222 27.8
-       angleY -35.689
-      }
-      {
-       coords -28.362 5.525 32.47
-       angleY -35.689
-      }
-     }
-    }
-   }
-  }
- }
- {
-  coords 2178.003 433.067 1131.349
-  Points {
-   ShapePoint "{628AB6E286A21494}" {
-    Position 37.071 -0.286 15.912
-   }
-   ShapePoint "{628AB6E2FAD2B662}" {
-    Position 36.808 -1.521 11.158
-   }
-   ShapePoint "{628AB6E25A36AD91}" {
-    Position 8.849 -1.164 0.785
-   }
-   ShapePoint "{628AB6E286A1D99F}" {
-    Position -18.283 -0.179 -12.134
-   }
-   ShapePoint "{628AB6E25703B98B}" {
-    Position -36.872 -0.063 -23.409
-   }
-   ShapePoint "{628AB6E283DDBFDA}" {
-    Position -51.97 0.546 -34.877
-   }
-   ShapePoint "{628AB6E2FC203C37}" {
-    Position -55.582 1.323 -32.717
-   }
-  }
-  LineColor 0 0 0 0
-  {
-   WallGeneratorEntity : "{55A3B9EDA50846BB}PrefabLibrary/Generators/Walls/Net/WG_NetFence_03.et" {
-    coords 0 0 0
-    Flags 1048579
-    {
-     $grp SCR_DestructibleEntity : "{168CE46092EAD301}PrefabLibrary/Walls/Net/NetFence_03_4m.et" {
-      {
-       coords 37.071 -0.286 15.912
-       angleY -266.835
-      }
-      {
-       coords -45.991 0.311 -30.364
-       angleY -217.045
-      }
-      {
-       coords -50.793 0.5 -33.989
-       angleY -165.122
-      }
-     }
-     SCR_DestructibleEntity : "{25E7C831EF87A0E1}PrefabLibrary/Walls/Net/NetFence_03_Pole.et" {
-      coords -54.617 1.157 -32.973
-      angleY -165.122
-     }
-     SCR_DestructibleEntity : "{4ED2904BF79D37CC}PrefabLibrary/Walls/Net/NetFence_03_D.et" {
-      coords 21.992 -1.224 6.065
-      angleY -201.887
-     }
-     $grp SCR_DestructibleEntity : "{664176B900CE86B2}PrefabLibrary/Walls/Net/NetFence_03_2m.et" {
-      {
-       coords -15.698 -0.271 -10.909
-       angleY -205.365
-      }
-      {
-       coords -34.679 -0.079 -22.09
-       angleY -211.017
-      }
-      {
-       coords -49.19 0.437 -32.779
-       angleY -217.045
-      }
-     }
-     SCR_DestructibleEntity : "{B0692A9A67445206}Prefabs/Structures/Walls/Net/NetFence_03/NetFence_03_4m_D.et" {
-      coords -31.243 -0.105 -20.024
-      angleY 148.983
-     }
-     $grp SCR_DestructibleEntity : "{C378176AB614B1FD}PrefabLibrary/Walls/Net/NetFence_03_4m_D.et" {
-      {
-       coords -4.842 -0.655 -5.762
-       angleY -205.365
-      }
-      {
-       coords -42.792 0.185 -27.949
-       angleY -217.045
-      }
-     }
-     $grp SCR_DestructibleEntity : "{F717C1D3B6A27867}PrefabLibrary/Walls/Net/NetFence_03_8m.et" {
-      {
-       coords 36.857 -1.293 12.037
-       angleY -201.887
-      }
-      {
-       coords 29.424 -1.259 9.051
-       angleY -201.887
-      }
-      {
-       coords 17.058 -1.202 4.083
-       angleY -201.887
-      }
-      {
-       coords 9.626 -1.168 1.097
-       angleY -205.365
-      }
-      {
-       coords 2.392 -0.911 -2.333
-       angleY -205.365
-      }
-      {
-       coords -8.464 -0.527 -7.479
-       angleY -205.365
-      }
-      {
-       coords -17.513 -0.206 -11.769
-       angleY -211.017
-      }
-      {
-       coords -24.378 -0.155 -15.897
-       angleY -211.017
-      }
-      {
-       coords -36.402 -0.066 -23.126
-       angleY -217.045
-      }
-     }
-    }
-   }
-  }
- }
- {
-  coords 2156.69 437.794 1163.557
-  Points {
-   ShapePoint "{628AB6E2F3A02246}" {
-    Position -15.866 2.068 8.526
-   }
-   ShapePoint "{628AB6E5FBECF24E}" {
-    Position -3.933 2.198 12.696
-   }
-   ShapePoint "{628AB6E2F3A7CAA5}" {
-    Position 22.308 0.619 14.892
-   }
-   ShapePoint "{628AB6E2F2E0A542}" {
-    Position 47.378 -1.182 11.398
-   }
-   ShapePoint "{628AB6E2F179D991}" {
-    Position 54.924 -4.983 -5.766
-   }
-  }
-  LineColor 0 0 0 0
-  {
-   WallGeneratorEntity : "{55A3B9EDA50846BB}PrefabLibrary/Generators/Walls/Net/WG_NetFence_03.et" {
-    coords 0 0 0
-    Flags 1048579
-    {
-     $grp SCR_DestructibleEntity : "{168CE46092EAD301}PrefabLibrary/Walls/Net/NetFence_03_4m.et" {
-      {
-       coords -8.305 2.15 11.168
-       angleY -19.262
-      }
-      {
-       coords 16.696 0.948 14.39
-       angleY -5.114
-      }
-     }
-     SCR_DestructibleEntity : "{25E7C831EF87A0E1}PrefabLibrary/Walls/Net/NetFence_03_Pole.et" {
-      coords 54.572 -4.798 -4.931
-      angleY 67.148
-     }
-     $grp SCR_DestructibleEntity : "{4ED2904BF79D37CC}PrefabLibrary/Walls/Net/NetFence_03_D.et" {
-      {
-       coords 3.445 1.725 13.204
-       angleY -5.114
-      }
-      {
-       coords 26.641 0.312 14.36
-       angleY 8.129
-      }
-     }
-     $grp SCR_DestructibleEntity : "{664176B900CE86B2}PrefabLibrary/Walls/Net/NetFence_03_2m.et" {
-      {
-       coords 20.683 0.714 14.747
-       angleY -5.114
-      }
-      {
-       coords 53.807 -4.398 -3.116
-       angleY 67.148
-      }
-     }
-     SCR_DestructibleEntity : "{C378176AB614B1FD}PrefabLibrary/Walls/Net/NetFence_03_4m_D.et" {
-      coords 22.682 0.597 14.925
-      angleY 8.129
-     }
-     $grp SCR_DestructibleEntity : "{F717C1D3B6A27867}PrefabLibrary/Walls/Net/NetFence_03_8m.et" {
-      {
-       coords -15.866 2.068 8.526
-       angleY -19.262
-      }
-      {
-       coords -4.519 2.192 12.491
-       angleY -5.114
-      }
-      {
-       coords 8.731 1.415 13.677
-       angleY -5.114
-      }
-      {
-       coords 31.891 -0.066 13.61
-       angleY 8.129
-      }
-      {
-       coords 39.801 -0.636 12.48
-       angleY 8.129
-      }
-      {
-       coords 47.71 -1.206 11.351
-       angleY 67.148
-      }
-      {
-       coords 50.758 -2.802 4.117
-       angleY 67.148
-      }
-     }
-    }
-   }
-  }
- }
-}
-PowerlineEntity {
- coords 2212.782 432.648 1145.592
- Material "{836210B285A81785}Assets/Structures/Infrastructure/Power/Powerlines/data/default_powerline_wire.emat"
- Cables {
-  Cable "{628AF820E1256EAD}" {
-   StartPoint 0.053 7.878 -0.252
-   EndPoint -44.471 8.634 -17.31
-  }
-  Cable "{628AF820DEBF6E14}" {
-   StartPoint -44.471 8.634 -17.31
-   EndPoint -88.066 9.489 -46.039
-  }
- }
-}
-$grp SCR_AP6_FactionRestrictionZone {
- FactionRestrictionZone_NATO {
-  coords 1357.079 425.107 1525.514
-  TriggerShapeType Sphere
-  SphereRadius 150
-  TriggerActivationType "Every query"
-  PeriodicQueries 1
-  UpdatePeriod 10
-  PrefabsFilter {
-   PrefabFilter "{62911EE5C32E4293}" {
-    Prefab "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NATO_Player.et"
-   }
-  }
-  m_sOwnerFactionKey "NATO"
- }
- FactionRestrictionZone_RUSSIA {
-  coords 2953.362 421.875 564.839
-  TriggerShapeType Sphere
-  SphereRadius 150
-  TriggerActivationType "Every query"
-  PeriodicQueries 1
-  UpdatePeriod 10
-  PrefabsFilter {
-   PrefabFilter "{62911EE5C32E4293}" {
-    Prefab "{9B452A52081470E3}Prefabs/Characters/AP6/RHS/Default_RUSSIA_Player.et"
-   }
-  }
-  m_sOwnerFactionKey "NATO"
- }
-}
 SCR_LoadoutManager SCR_LoadoutManager {
  components {
   RplComponent "{627D1B755FF9D782}" {
@@ -16248,15 +16020,10 @@ SCR_LoadoutManager SCR_LoadoutManager {
  }
  Flags 0
  m_aPlayerLoadouts {
-  SCR_PlayerArsenalLoadout "{627D1B74B929AB29}" {
-   m_sLoadoutName "NATO Saved Gear"
-   m_sLoadoutResource "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NATO_Player.et"
+  SCR_PlayerArsenalLoadout "{644F10DD6AEC57AF}" {
+   m_sLoadoutName "Saved Gear"
+   m_sLoadoutResource "{C2E1E971A4C02343}Prefabs/Characters/AP6/RHS/NATO_SavedGear.et"
    m_sAffiliatedFaction "NATO"
-  }
-  SCR_PlayerArsenalLoadout "{627D1B74B61E3977}" {
-   m_sLoadoutName "RUSSIA Saved Gear"
-   m_sLoadoutResource "{9B452A52081470E3}Prefabs/Characters/AP6/RHS/Default_RUSSIA_Player.et"
-   m_sAffiliatedFaction "RUSSIA"
   }
   SCR_FactionPlayerLoadout "{631096E1B688F573}" {
    m_sLoadoutName "Rifleman"
@@ -16288,15 +16055,10 @@ SCR_LoadoutManager SCR_LoadoutManager {
    m_sLoadoutResource "{B5706D2D6675111C}Prefabs/Characters/AP6/RHS/NATO_Sniper.et"
    m_sAffiliatedFaction "NATO"
   }
-  SCR_FactionPlayerLoadout "{631096E1AAE437DC}" {
-   m_sLoadoutName "Anit-Tank"
-   m_sLoadoutResource "{1161A2B7E638F79F}Prefabs/Characters/AP6/RHS/NATO_AT.et"
-   m_sAffiliatedFaction "NATO"
-  }
-  SCR_FactionPlayerLoadout "{631096EE7C12CE0F}" {
-   m_sLoadoutName "Explosive Spec."
-   m_sLoadoutResource "{1B74D3796E396C7F}Prefabs/Characters/AP6/RHS/NATO_ExplosiveSpecialist.et"
-   m_sAffiliatedFaction "NATO"
+  SCR_PlayerArsenalLoadout "{644F10DD6496D92B}" {
+   m_sLoadoutName "Saved Gear"
+   m_sLoadoutResource "{30A6F484B2A6EA70}Prefabs/Characters/AP6/RHS/RUSSIA_SavedGear.et"
+   m_sAffiliatedFaction "RUSSIA"
   }
   SCR_FactionPlayerLoadout "{631096E1A9EFFF78}" {
    m_sLoadoutName "Rifleman"
@@ -16328,16 +16090,6 @@ SCR_LoadoutManager SCR_LoadoutManager {
    m_sLoadoutResource "{26111BEC16D45B8B}Prefabs/Characters/AP6/RHS/RUSSIA_Sharpshooter.et"
    m_sAffiliatedFaction "RUSSIA"
   }
-  SCR_FactionPlayerLoadout "{631096E1A5C3DE2B}" {
-   m_sLoadoutName "Anti-Tank"
-   m_sLoadoutResource "{FA258EF5C6E7BE90}Prefabs/Characters/AP6/RHS/RUSSIA_AT.et"
-   m_sAffiliatedFaction "RUSSIA"
-  }
-  SCR_FactionPlayerLoadout "{631096EE1D07F8F4}" {
-   m_sLoadoutName "Explosive Spec."
-   m_sLoadoutResource "{97DB9082F42F8333}Prefabs/Characters/AP6/RHS/RUSSIA_ExplosiveSpecialist.et"
-   m_sAffiliatedFaction "RUSSIA"
-  }
  }
 }
 SCR_MapLocator SCR_MapLocator {
@@ -16351,1273 +16103,28 @@ SCR_PopUpNotification SCR_PopupNotification {
   }
  }
 }
-$grp StaticModelEntity : "{07F043DD6AACCD0B}Prefabs/Structures/Infrastructure/Barriers/BarGate_01/BarGate_01.et" {
- {
-  coords 2119.107 0 1102.503
-  angleY 49.446
- }
- {
-  coords 2213.557 0 1151.829
-  angleY 70.209
- }
-}
-GenericEntity : "{1EB5949DF6738E38}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_USSR_01.et" {
- components {
-  FactionAffiliationComponent "{5D06E95AF4851C5E}" {
-   "faction affiliation" "RUSSIA"
-  }
- }
- coords 1365.231 422.276 1496.634
- angleY 151.348
- {
-  GenericEntity {
-   ID "5D22B941F0092492"
-   components {
-    SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
-     "faction affiliation" "RUSSIA"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5E690689C9377619"
-   components {
-    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-     "faction affiliation" "RUSSIA"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D45393ACC919C9A"
-   {
-    GenericEntity {
-     ID "5D45393AE7819CB9"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393AE7819C87"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393AE7819CB2"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393AE7819C85"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393AE7819CBC"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-   }
-  }
- }
+GenericEntity : "{1E4C8AD00BBB16AA}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_Base.et" {
+ coords 1772.252 414.725 1144.557
 }
 $grp GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_01_long_burlap.et" {
  {
-  coords 2163.91 433.378 1137.892
-  angleY -24.282
- }
- {
-  coords 2160.798 433.528 1136.307
-  angleY -30.484
- }
- {
-  coords 1695.796 417.922 1118.618
+  coords 1695.796 417.93 1118.618
   angleY -25.205
  }
  {
-  coords 1698.892 417.993 1120.02
+  coords 1698.892 417.994 1120.02
   angleY 156.321
  }
 }
-GenericEntity : "{25B265F3E7CBDFC8}Prefabs/Props/Wrecks/BMP1_wreck.et" {
- coords 2135.115 434.513 1123.704
- angleX 12.741
- angleY -62.723
- angleZ -11.03
-}
-$grp GenericEntity : "{31A455F7FD8DCE84}Prefabs/Props/Military/Sandbags/Sandbag_01_long_high_plastic.et" {
- {
-  coords 2902.059 420.909 600.003
-  angleX -6.041
-  angleY -37.463
-  angleZ 2.376
- }
- {
-  coords 2899.681 421.213 597.586
-  angleX 1.97
-  angleY 126.606
-  angleZ 0.349
- }
- {
-  coords 2897.758 421.391 594.84
-  angleX -1.724
-  angleY -57.096
-  angleZ 1.016
- }
- {
-  coords 2920.833 420.753 609.723
-  angleX 5.451
-  angleY 150.744
-  angleZ -3.046
- }
- {
-  coords 2923.702 420.579 611.279
-  angleX -4.738
-  angleY -27.864
-  angleZ 2.5
- }
- {
-  coords 2926.885 420.444 612.512
-  angleX -6.071
-  angleY -13.475
-  angleZ 1.452
- }
+GenericEntity : "{2B24356C351A2538}Prefabs/Props/Wrecks/M113_wreck.et" {
+ coords 1849.642 413.941 1158.188
+ angleX -2.516
+ angleY -34.218
+ angleZ -3.693
 }
 GenericEntity : "{361EEFE7B91BF9E8}Prefabs/Compositions/Misc/SubCompositions/BarrelMetalGroup_01.et" {
  coords 2578.691 402.932 908.097
  angleY 0
-}
-GenericEntity : "{388B774519BD6294}Prefabs/Props/Wrecks/T62_wreck.et" {
- coords 2196.22 432.937 1149.477
- angleY 90.131
-}
-GenericEntity : "{3F0D0593590519DA}Prefabs/Props/Garbage/Tires/TirePile_01_medium.et" {
- coords 2156.883 433.385 1119.466
- angleX 14.253
- angleY -32.441
- angleZ 4.391
-}
-GenericEntity : "{4510C273B794F3A9}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_USSR_01.et" {
- components {
-  FactionAffiliationComponent "{5E38DC8C310CD141}" {
-   "faction affiliation" "RUSSIA"
-  }
- }
- coords 1327.307 423.477 1473.616
- angleY 17.139
- {
-  GenericEntity {
-   ID "5D22B94164F546B2"
-   components {
-    SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
-     "faction affiliation" "RUSSIA"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5E690688C8D87A5F"
-   components {
-    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-     "faction affiliation" "RUSSIA"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D45393C2BCAFA5E"
-   {
-    GenericEntity {
-     ID "5D45393CBA8CFC49"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CBA8CFC4A"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CBA8CFC47"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CBA8CFC7C"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CBA8CFC42"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D45393C2BCAFB2E"
-   {
-    GenericEntity {
-     ID "5D45393C5D30CEEE"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D3171A0"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D30530A"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D30CEF2"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D3171A5"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D30530D"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D30CEF0"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D30CEF3"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D3171AA"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D3171AF"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D30530B"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D3171AD"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D317158"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D31715D"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D30530C"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D30CEED"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C5D3171A6"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D45393C2BCAFBA7"
-   {
-    GenericEntity {
-     ID "5D45393C6E9B22B4"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B74F8"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B74FD"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B22B6"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B22B7"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B22AF"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B22B9"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B22B8"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B22BA"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B74C4"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B74C6"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393C6E9B22B3"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-   }
-  }
- }
-}
-GenericEntity : "{4BE795374BE3D67E}Prefabs/Props/Industrial/BarrelFuel_01_closed.et" {
- coords 2211.618 432.789 1145.495
- angleX 2.684
-}
-DecalEntity : "{4E2502622DA0DB28}Prefabs/Decals/Miscellaneous/Decal_Damage_Burnt_01.et" {
- coords 2138.389 433.9 1121.407
- angleX -87.652
- angleY -19.105
- angleZ 19.075
- scale 10
-}
-GenericEntity : "{525C793E1943EA05}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_USSR_01.et" {
- coords 1295.414 426.51 1483.078
- angleY -31.401
- {
-  GenericEntity {
-   ID "5D1EB45CF2DF7D55"
-   coords -0.545 -0.888 -11.146
-   angleY 3.088
-  }
-  GenericEntity {
-   ID "5D1EB45CF2DF7D94"
-   coords -0.545 -1.865 -19.811
-   angleY -1.211
-  }
-  GenericEntity {
-   ID "5D1EB45CF2DF7DA2"
-   coords -0.545 -1.285 -14.591
-   angleY 3.172
-  }
-  GenericEntity {
-   ID "5D1EB45CF2DF7DBB"
-   coords -0.545 -1.579 -17.331
-   angleY -178.435
-  }
-  GenericEntity {
-   ID "5D1EB45CF2DF7DC3"
-   coords -0.545 0.959 16.658
-   angleY 1.368
-  }
-  GenericEntity {
-   ID "5D1EB45CF2DF7DE6"
-   coords -0.545 0.938 10.879
-   angleY -6.165
-  }
-  GenericEntity {
-   ID "5D1EB45CF2DF7DF0"
-   coords -0.545 0.95 13.704
-   angleY -175.776
-  }
-  GenericEntity {
-   ID "5D22B941350A4D8F"
-   components {
-    SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
-     "faction affiliation" "RUSSIA"
-    }
-   }
-   coords 9.045 -0.855 -6.881
-   angleY 103.141
-  }
-  GenericEntity {
-   ID "5E64C0F6B629B0D8"
-   coords 8.083 -0.833 -7.007
-   {
-    GenericEntity {
-     ID "5E64C0FA01642058"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0164205B"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01647BD1"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0167FF9B"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0164205A"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01647BCF"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FCB1C99422"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01642056"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01642240"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01647BD0"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0167FF9F"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01642242"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0167FF9D"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5E69068BDA9E9D25"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5E330D6AB072A08A"
-   coords 9.771 -0.739 -5.152
-   angleX -0.601
-   angleY 105.612
-   angleZ 1.096
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FA43"
-   coords -10.08 0.812 5.921
-   angleY 107.562
-  }
-  GenericEntity {
-   ID "5E64C0F163C27820"
-   coords 9.827 -0.877 -6.737
-   angleY 77.065
-  }
-  GenericEntity {
-   ID "5E64C0F163C279D3"
-   coords -10.362 0.963 7.624
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E408"
-   coords 7.714 0.625 8.804
-   angleY -55.678
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E423"
-   coords -10.224 -0.559 -10.178
-   angleY -152.964
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E44E"
-   coords 8.716 -0.991 -8.698
-   angleX -75.985
-   angleY -178.804
-   angleZ -91.798
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E472"
-   coords -10.551 -0.491 -9.58
-   angleY -152.964
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E484"
-   coords -9.477 1.025 8.748
-   angleY -124.612
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E4A0"
-   coords -10.746 0.829 5.947
-   angleY -70.915
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E4B7"
-   coords 8.684 -0.932 -8.02
-   angleX -65.593
-   angleZ 90
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E4D6"
-   coords 8.749 -0.764 -5.909
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E4EE"
-   coords 9.458 -0.788 -5.826
-   angleY 65.593
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1E5C2"
-   coords -9.895 -0.518 -9.622
-   angleY -66.217
-  }
-  GenericEntity {
-   ID "5E6A93840A294BB7"
-   components {
-    SCR_FactionAffiliationComponent "{5CB8A6AD6CA2D332}" {
-     "faction affiliation" "RUSSIA"
-    }
-   }
-   coords -9.866 0.378 0.557
-   angleY 180
-   {
-    GenericEntity {
-     ID "5E6A90B022FE573D"
-     coords -6.5 -0.038 0
-    }
-   }
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FB39"
-   coords 6.484 0.712 9.364
-   angleY 82.082
-  }
-  GenericEntity {
-   ID "5E64C0F163C27853"
-   coords -11.356 0.567 2.383
-   angleY 32.028
-  }
-  GenericEntity {
-   ID "5E64C0F163C2786A"
-   coords -10.327 -0.331 -7.787
-   angleY -16.285
-  }
-  GenericEntity {
-   ID "5E64C0F163C2787F"
-   coords 8.483 0.477 7.96
-   angleY 53.149
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FB50"
-   coords -9.253 1.067 9.773
-   angleY 109.639
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FB07"
-   coords -10.755 0.964 7.601
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FB82"
-   coords 8.993 -1.032 -9.104
-   angleX 3.748
-   angleY 7.377
-   angleZ -26.789
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FB92"
-   coords 9.516 -1.055 -9.109
-   angleY -8.206
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FBA2"
-   coords 9.478 -0.932 -7.607
-   angleY 4.045
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FBCE"
-   coords -11.132 0.865 6.189
-   angleX -4.077
-   angleY -22.249
-   angleZ -72.337
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FBDF"
-   coords -10.465 1.059 9.028
-   angleY 13.881
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FBF1"
-   coords -11.139 1.074 8.979
-   angleY -175.916
-  }
-  GenericEntity {
-   ID "5E64C0F1F0F1FB6E"
-   coords 7.539 0.755 9.662
-   angleY -19.289
-  }
-  GenericEntity {
-   ID "5E64C0F3CBBCFD8E"
-   coords -12.083 1 7.378
-   angleY -176.099
-  }
-  GenericEntity {
-   ID "5E64C0F3CBBCFDE6"
-   coords -10.523 0.544 2.437
-   angleY 14.417
-  }
-  GenericEntity {
-   ID "5E69068881B8CF57"
-   components {
-    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-     "faction affiliation" "RUSSIA"
-    }
-   }
-   coords -10.352 0.759 5.238
-   angleY 153.993
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA54"
-   coords 10.86 -1.046 -8.462
-   angleY -84.717
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA63"
-   coords 11.127 -0.607 -3.104
-   angleY -90
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FAC0"
-   coords -12.36 1.115 10.842
-   angleY 92.796
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FACE"
-   coords -12.505 0.867 5.49
-   angleY 92.796
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FADB"
-   coords -10.23 0.413 0.888
-   angleY 48.384
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA01"
-   coords 11.509 -0.981 -7.54
-   angleY -84.806
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA10"
-   coords 11.067 -0.811 -5.657
-   angleY -87.365
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA1D"
-   coords 10.559 -0.647 -3.878
-   angleY -88.781
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA2F"
-   coords 10.362 -0.949 -7.45
-   angleY -83.417
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA73"
-   coords 11.661 -0.699 -3.964
-   angleY -89.495
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA81"
-   coords -13.009 0.96 6.387
-   angleY 91.996
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA8E"
-   coords -12.437 1.063 8.065
-   angleY 90.879
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FA9A"
-   coords -11.801 1.115 9.803
-   angleY 93.551
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FAA8"
-   coords -11.922 0.904 6.263
-   angleY 91.448
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FAB5"
-   coords -10.974 0.577 2.697
-   angleY 52.817
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FAE8"
-   coords -11.869 0.635 2.954
-   angleY 52.928
-  }
-  StaticModelEntity {
-   ID "5E64C0F1F0F1FAF5"
-   coords -12.907 1.105 9.909
-   angleY 91.996
-  }
-  StaticModelEntity {
-   ID "5D1EB45CF2DF7D18"
-   coords -0.462 0.009 0
-  }
- }
-}
-StaticModelEntity : "{5824BC6E4A1AF407}Prefabs/Compositions/Misc/SubCompositions/Tent_Medical_Cluttered_USSR_01.et" {
- coords 1379.717 423.994 1522.531
- angleY -119.366
-}
-SCR_DestructibleBuildingEntity : "{5E37989A2615F13F}Prefabs/Structures/Infrastructure/Power/Utility/ElectricCabinet_01/ElectricCabinet_01.et" {
- coords 2124.919 0 1099.883
- angleY 54.148
-}
-$grp SCR_PowerPole : "{64EDA881A2C6291C}Prefabs/Structures/Infrastructure/Power/Powerlines/PowerLine_01/PowerLine_01_pole_small_hook.et" {
- {
-  coords 2212.782 0.001 1145.592
-  angleY 77.618
-  {
-   GameEntity : "{E7FD0B8019E96F73}Prefabs/Structures/BuildingParts/Lights/LampTower_01.et" {
-    components {
-     ParametricMaterialInstanceComponent "{628B4C70E6F02846}" {
-     }
-    }
-    coords -0.073 7.716 0.012
-    angleX -45
-    angleY -90
-    {
-     LightEntity : "{8351F4F8AB128B7B}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_02/LightPrefabs/LampStreet_E_02_light.et" {
-      coords 0 0 0.5
-      angleX -25
-     }
-    }
-   }
-  }
- }
- {
-  coords 2124.568 0 1099.765
-  angleY 56.135
-  {
-   GameEntity : "{E7FD0B8019E96F73}Prefabs/Structures/BuildingParts/Lights/LampTower_01.et" {
-    components {
-     ParametricMaterialInstanceComponent "{628B4C70D5F90C69}" {
-     }
-    }
-    coords -0.073 7.716 0.012
-    angleX -45
-    angleY -90
-    {
-     LightEntity : "{8351F4F8AB128B7B}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_02/LightPrefabs/LampStreet_E_02_light.et" {
-      coords 0 0 0.5
-      angleX -25
-     }
-    }
-   }
-  }
- }
- {
-  coords 2168.194 0 1128.509
-  angleY 61.699
-  {
-   GameEntity : "{E7FD0B8019E96F73}Prefabs/Structures/BuildingParts/Lights/LampTower_01.et" {
-    components {
-     ParametricMaterialInstanceComponent "{628B4C70DC83220D}" {
-     }
-    }
-    coords -0.073 7.716 0.012
-    angleX -45
-    angleY -90
-    {
-     LightEntity : "{8351F4F8AB128B7B}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_02/LightPrefabs/LampStreet_E_02_light.et" {
-      coords 0 0 0.5
-      angleX -25
-     }
-    }
-   }
-  }
- }
- {
-  coords 2135.698 0 1166.376
-  angleY 147.817
-  {
-   GameEntity : "{E7FD0B8019E96F73}Prefabs/Structures/BuildingParts/Lights/LampTower_01.et" {
-    components {
-     ParametricMaterialInstanceComponent "{628B4C70C61221EB}" {
-     }
-    }
-    coords -0.073 7.716 0.012
-    angleX -45
-    angleY -90
-    {
-     LightEntity : "{8351F4F8AB128B7B}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_02/LightPrefabs/LampStreet_E_02_light.et" {
-      coords 0 0 0.5
-      angleX -25
-     }
-    }
-   }
-  }
- }
 }
 GenericEntity : "{68ED84218EA1BDC3}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_USSR_01.et" {
  components {
@@ -17625,207 +16132,237 @@ GenericEntity : "{68ED84218EA1BDC3}Prefabs/Compositions/Slotted/SlotFlatSmall/An
    "faction affiliation" "RUSSIA"
   }
  }
- coords 1338.121 424.502 1500.683
-}
-GenericEntity : "{6929659CE9375CAF}Prefabs/Props/Garbage/Tires/TireTractor_01_single.et" {
- coords 2178.673 433.058 1131.607
- angleX 18.01
- angleY 1.747
- angleZ 5.633
-}
-StaticModelEntity : "{69C51128071163C3}Prefabs/Compositions/Misc/SubCompositions/Tent_Medical_Cluttered_US_01.et" {
- coords 2945.907 422.063 541.975
- angleY 162.939
-}
-GenericEntity : "{6DD8F04BE0E4C916}Prefabs/Compositions/Misc/CustomEntities/InteractionPoints/FuelService_USSR_NoAffiliation.et" {
- components {
-  SCR_FactionAffiliationComponent "{5CB8A6AD6CA2D332}" {
-   "faction affiliation" "RUSSIA"
+ coords 1488.702 404.921 1124.345
+ {
+  GenericEntity {
+   ID "5D371AC8408F65B6"
+   coords 0 0.158 0
+  }
+  GenericEntity {
+   ID "5D088D25691EE908"
+   coords 1.449 0.1 3.262
+   {
+    DecalEntity {
+     ID "56E0B29E01E2AC90"
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D088D25691EE964"
+   coords -0.487 0.1 -2.878
+   {
+    DecalEntity {
+     ID "56DEFDB4A9499F9B"
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D088D25691EE89C"
+   coords -3.255 0 4.228
+  }
+  GenericEntity {
+   ID "5D088D25691EE8F5"
+   coords -3.619 0 2.881
+  }
+  GenericEntity {
+   ID "5D088D25691EE881"
+   coords 0 1.052 0
+  }
+  GenericEntity {
+   ID "5D088D0C0D2DE29E"
+   coords 1.431 0 -3.877
+  }
+  GenericEntity {
+   ID "5DCAAA1BE0ED70D1"
+   coords 2.701 0.01 -0.106
+  }
+  GenericEntity {
+   ID "5DCAAA1BE0ED7135"
+   coords -2.798 0.01 -1.838
+  }
+  GenericEntity {
+   ID "5D088D25691EE925"
+   coords -4.442 0.1 -1.01
+   {
+    DecalEntity {
+     ID "56DF08929A14FB98"
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D088D25691EE932"
+   coords -5.886 0.1 -1.731
+   {
+    DecalEntity {
+     ID "56DF08929A14FB98"
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D088D0C0D2DE2B9"
+   coords -2.32 0 6.226
+  }
+  GenericEntity {
+   ID "5D088D0C0D2DE2E9"
+   coords 4.048 0 6.045
   }
  }
- coords 1335.455 426.31 1524.642
- angleY 57.292
 }
-$grp GenericEntity : "{6FD54E69CFDD6B07}Prefabs/Props/Industrial/BarrelFuel_01_closed_old.et" {
+$grp GenericEntity : "{7AF4B627D5C90235}Prefabs/Props/Military/Sandbags/Sandbag_01_round_high_burlap.et" {
  {
-  coords 2158.807 433.478 1134.601
-  angleX -0.895
-  angleY -0.014
-  angleZ 0.895
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1689.469 417.527 1115.3
+  angleX -0.085
+  angleY -20.163
+  angleZ -2.827
  }
  {
-  coords 2158.23 433.495 1134.095
-  angleX 0.598
-  angleY -73.201
-  angleZ 1.116
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1687.335 417.393 1111.132
+  angleX -2.827
+  angleY -110.342
+  angleZ 0.094
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1691.692 417.507 1109.064
+  angleX -0.206
+  angleY 159.335
+  angleZ 1.99
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1693.559 417.632 1113.295
+  angleX 1.984
+  angleY 70.85
+  angleZ 0.258
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1778.436 414.262 1149.311
+  angleX -0.225
+  angleY -13.869
+  angleZ 2.82
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1775.852 414.487 1145.446
+  angleX 3.686
+  angleY -103.988
+  angleZ 0.003
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1779.955 414.256 1142.91
+  angleX 0.619
+  angleY 165.582
+  angleZ -4.77
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1782.276 414.036 1146.909
+  angleX -2.815
+  angleY 77.156
+  angleZ -0.275
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1873.518 416.283 1161.474
+  angleX -0.119
+  angleY -0.956
+  angleZ -7.124
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1870.136 415.861 1158.237
+  angleX -7.123
+  angleY -91.201
+  angleZ 0.149
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1873.574 416.29 1154.856
+  angleX 0.177
+  angleY 178.587
+  angleZ 7.123
+ }
+ {
+  components {
+   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+    Enabled 0
+   }
+  }
+  coords 1876.726 416.685 1158.239
+  angleX 7.125
+  angleY 89.993
+  angleZ -0.001
  }
 }
-GenericEntity AmmoStorage_RUSSIA : "{7C20041DA3207191}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_USSR_01.et" {
+GenericEntity : "{7C20041DA3207191}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_USSR_01.et" {
  components {
   FactionAffiliationComponent "{5D06E95D07427B1F}" {
    "faction affiliation" "RUSSIA"
   }
-  SCR_CampaignBuildingCompositionComponent "{5E96A067C097D570}" {
-   Enabled 0
-  }
  }
- coords 1368.627 425.348 1536.701
- angleY -123.07
+ coords 1516.949 404.779 1125.556
+ angleY -47.307
  {
   GenericEntity {
    ID "5D06FC881A7A27FE"
    {
     GenericEntity {
-     ID "5D82CDCA0B582A12"
-     components {
-      SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
-       Enabled 0
-      }
-     }
-     {
-      GenericEntity {
-       ID "5D82CDCA1C3D1199"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA1C3D11E2"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA1C3D11ED"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA1C3D11E5"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA1C3D11E7"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA1C3D119C"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA1C3D119E"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA1C3D1190"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA1C3D1191"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA1C3D11E0"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
      ID "5D371ACBC8811EDA"
      components {
-      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
-       m_eArsenalSaveType NO_RESTRICTIONS
-      }
       SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
        "faction affiliation" "RUSSIA"
-      }
-      SCR_ResupplySupportStationComponent "{5E2CE1BAE058CADC}" {
-       m_bIsEnabled 0
       }
      }
     }
@@ -17835,397 +16372,34 @@ GenericEntity AmmoStorage_RUSSIA : "{7C20041DA3207191}Prefabs/Compositions/Slott
    ID "5D06FC881A7A276B"
    {
     GenericEntity {
-     ID "5D82CDCA57D02289"
-     components {
-      SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
-       Enabled 0
-      }
-     }
-     {
-      GenericEntity {
-       ID "5D82CDCA6C7DA631"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7D1880"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7D188E"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7DA632"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7DA633"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7DA60D"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7DA63E"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7D1883"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7DA635"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7DE2AF"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-      GenericEntity {
-       ID "5D82CDCA6C7DA634"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
      ID "5D371ACBDC5FA529"
      components {
-      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
-       m_eArsenalSaveType NO_RESTRICTIONS
-      }
       SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
        "faction affiliation" "RUSSIA"
       }
-      SCR_ResupplySupportStationComponent "{5E2CE1BAE058CADC}" {
-       m_bIsEnabled 0
-      }
      }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D06FC8C65ACB856"
-   {
-    DecalEntity {
-     ID "56E0B29E01E2AC90"
-     coords 0 0 0
-     angleX -90
-     angleY 180
-     angleZ -180
     }
    }
   }
  }
 }
-GenericEntity AmmoStorage_NATO : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et" {
+GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et" {
  components {
   FactionAffiliationComponent "{5D06E95D3BF135DB}" {
    "faction affiliation" "NATO"
   }
-  SCR_CampaignBuildingCompositionComponent "{5E96A067C097D570}" {
-   Enabled 0
-  }
  }
- coords 2958.953 421.895 552.711
- angleY -55.444
+ coords 1991.236 434.101 1023.155
+ angleY 54.856
  {
   GenericEntity {
    ID "5D06E957D85806FB"
-   coords -3.437 0.055 -1.252
-   angleY 4.279
    {
-    GenericEntity {
-     ID "5D82CDCBCE1C5003"
-     components {
-      SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
-       Enabled 0
-      }
-     }
-     coords 0.031 -0.018 1.827
-     {
-      GenericEntity {
-       ID "5D82CDCBC4CB9EB1"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -1.182 -0.168 -0.935
-       angleY 86.64
-      }
-      GenericEntity {
-       ID "5D82CDCBC4CB9EA9"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords 0.863 -0.087 -2.606
-       angleY -92.551
-      }
-      GenericEntity {
-       ID "5D82CDCBC4CB9EB7"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -0.161 -0.143 -2.606
-       angleY 87.449
-      }
-      GenericEntity {
-       ID "5D82CDCBC4CB9EB9"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -0.668 -0.164 0.176
-      }
-      GenericEntity {
-       ID "5D82CDCBC4CB9EBB"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords 0.594 -0.068 0.109
-       angleY -92.551
-      }
-      GenericEntity {
-       ID "5D82CDCBC4CB9EAA"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords 0.844 -0.043 -3.947
-       angleY 96.2
-      }
-      GenericEntity {
-       ID "5D82CDCBC4CB9EB4"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords 1.111 -0.134 -1.321
-       angleY 90
-      }
-      GenericEntity {
-       ID "5D82CDCBC4CB9EB6"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -1.168 -0.185 -2.58
-       angleY -90
-      }
-      GenericEntity {
-       ID "5D82CDCBC4CB9EAC"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -0.456 -0.11 -4.019
-      }
-      GenericEntity {
-       ID "5D82CDCBC4CB9EBE"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -0.038 -0.112 -1.296
-       angleY -90
-      }
-     }
-    }
     GenericEntity {
      ID "5D371ACBFA947460"
      components {
-      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
-       m_eArsenalSaveType NO_RESTRICTIONS
-      }
       SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
        "faction affiliation" "NATO"
-      }
-      SCR_ResupplySupportStationComponent "{5E2CE1BAE058CADC}" {
-       m_bIsEnabled 0
-      }
-     }
-     coords -0.012 -0.029 3.047
-     angleY 3.197
-    }
-    GenericEntity {
-     ID "5D06E95762E16125"
-     coords 0.102 0.028 -2.996
-     angleY -90
-     angleZ -86.114
-    }
-    StaticModelEntity {
-     ID "5D06E95F91DA892F"
-     coords 0.001 0 0
-     {
-      GenericEntity {
-       ID "5A532DC5FADC4919"
-       coords -0.001 0 0
-      }
-      GenericEntity {
-       ID "5A532DC5FADC4941"
-       coords -0.001 0 0
       }
      }
     }
@@ -18233,368 +16407,31 @@ GenericEntity AmmoStorage_NATO : "{7C367E9261376345}Prefabs/Compositions/Slotted
   }
   GenericEntity {
    ID "5D06E957D858060A"
-   coords 2.891 -0.021 -1.771
-   angleY 1.868
    {
-    GenericEntity {
-     ID "5E430BEF8FEF5401"
-     components {
-      SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
-       Enabled 0
-      }
-     }
-     coords -0.007 0.057 1.687
-     {
-      GenericEntity {
-       ID "5D82CDCB8D06EFC9"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -1.113 -0.074 0.193
-       angleY 86.846
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFF9"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords 0.054 0.056 -2.304
-       angleY 91.564
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFC4"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords 0.805 0.073 -0.878
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFC6"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -0.663 -0.015 -0.878
-       angleY -180
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFC7"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -1.053 0.004 -2.175
-       angleY 3.263
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFF0"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -1.098 0.069 -3.596
-       angleY 93.263
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFFB"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords 1.087 0.11 -2.342
-       angleY -90
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFC0"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords 1.151 0.043 0.271
-       angleY 90
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFFD"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords 0.975 0.159 -3.696
-       angleY 90
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFCC"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -0.015 -0.017 0.398
-       angleY 0.827
-      }
-      GenericEntity {
-       ID "5D82CDCB8D06EFFE"
-       components {
-        SCR_ResourceComponent "{5D247A59598D71AE}" {
-         m_aContainers {
-          SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-           m_fResourceValueCurrent 1000
-           m_fResourceValueMax 1000
-          }
-         }
-        }
-       }
-       coords -0.06 0.123 -3.802
-       angleY -89.173
-      }
-     }
-    }
     GenericEntity {
      ID "5D371ACBE97B9E1F"
      components {
-      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
-       m_eArsenalSaveType NO_RESTRICTIONS
-      }
       SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
        "faction affiliation" "NATO"
       }
-      SCR_ResupplySupportStationComponent "{5E2CE1BAE058CADC}" {
-       m_bIsEnabled 0
-      }
-     }
-     coords 0.026 0.001 3.07
-     angleY -10.851
-    }
-    GenericEntity {
-     ID "5D06E95764C08C01"
-     coords 0.105 0.818 -2.988
-     angleY -90
-     angleZ -86.114
-    }
-    StaticModelEntity {
-     ID "5D06E95F8C99B4E9"
-     coords 0 0 0
-     {
-      GenericEntity {
-       ID "5A532DC5FADC4919"
-       coords 0 0.102 0
-      }
-      GenericEntity {
-       ID "5A532DC5FADC4941"
-       coords 0 0.102 0
-      }
      }
     }
    }
   }
-  GenericEntity {
-   ID "5E330D6E0719D313"
-   coords -1.345 0.002 1.695
-   angleX -0.098
-   angleY 11.084
-   angleZ -1.494
-  }
-  GenericEntity {
-   ID "5D06FC8C411C3F1F"
-   coords 2.241 -0.021 -0.508
-   angleY 100.303
-   {
-    DecalEntity {
-     ID "56E0B29E01E2AC90"
-     coords 0 0 0
-     angleX -90
-     angleY 180
-     angleZ -180
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D06FC8C411C3F41"
-   coords -3.103 0.047 -0.851
-   angleY 14.492
-   {
-    DecalEntity {
-     ID "56E0B29E01E2AC90"
-     coords 0 0 0.001
-     angleX -90
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D06FC8C411C3F59"
-   coords -0.555 0.022 -1.643
-   angleY -145.935
-   {
-    DecalEntity {
-     ID "56E0B29E01E2AC90"
-     coords 0 0 0
-     angleX -90
-     angleY -180
-     angleZ -180
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D06E957D85806A0"
-   coords -0.36 0.004 0.071
-   angleY 4.431
-  }
-  GenericEntity {
-   ID "5D06E957D85806B1"
-   coords -0.365 0.038 -3.765
-   angleY 0.291
-  }
-  GenericEntity {
-   ID "5D088D0C61B8CA0B"
-   coords 1.444 0.026 -5.221
-   angleY 94.434
-  }
-  GenericEntity {
-   ID "5E5C73D3814E6090"
-   coords -2.211 0.071 -4.879
-   angleY 91.871
-  }
-  GenericEntity {
-   ID "5D088D0C61B8CA69"
-   coords -6.304 0.062 2.124
-   angleY -67.257
-  }
-  StaticModelEntity {
-   ID "5D088D66E3D32EF8"
-   coords -1.352 0.002 1.686
-  }
  }
 }
-$grp GenericEntity : "{7FE30F5687748FDA}Prefabs/World/Locations/Common/Urban/LocationUrbanTown.et" {
- MM_Waldrand {
-  components {
-   SCR_EditableCommentComponent "{529AB059519FE609}" {
-    m_UIInfo SCR_EditableCommentUIInfo "{5298E609432D192D}" {
-     Name "Waldrand"
-    }
-   }
-   SCR_MapDescriptorComponent "{527892B6ED748CEB}" {
-    DisplayName "Waldrand"
-   }
-  }
-  coords 2161.925 433.427 1137.993
- }
- MM_Base_Russia {
-  components {
-   SCR_EditableCommentComponent "{529AB059519FE609}" {
-    m_UIInfo SCR_EditableCommentUIInfo "{5298E609432D192D}" {
-     Name "Russia Base"
-    }
-   }
-   SCR_MapDescriptorComponent "{527892B6ED748CEB}" {
-    DisplayName "Russia Base"
-   }
-  }
-  coords 1344.845 424.173 1502.494
- }
- MM_Base_Nato {
-  components {
-   SCR_EditableCommentComponent "{529AB059519FE609}" {
-    m_UIInfo SCR_EditableCommentUIInfo "{5298E609432D192D}" {
-     Name "NATO Base"
-    }
-   }
-   SCR_MapDescriptorComponent "{527892B6ED748CEB}" {
-    DisplayName "Nato Base"
-   }
-  }
-  coords 2930.429 421.875 584.194
- }
+DecalEntity : "{80B1153302345834}Prefabs/Decals/Miscellaneous/Decal_Damage_Burnt_03.et" {
+ coords 1701.091 419.225 1103.687
+ angleX -82.321
+ angleY 125.123
+ angleZ -125.366
+ scale 5
 }
-$grp DecalEntity : "{80B1153302345834}Prefabs/Decals/Miscellaneous/Decal_Damage_Burnt_03.et" {
- {
-  coords 2578.141 403.219 893.245
-  angleX -90
-  angleY -180
-  angleZ -180
-  scale 5
- }
- {
-  coords 1701.091 419.225 1103.687
-  angleX -82.321
-  angleY 125.123
-  angleZ -125.366
-  scale 5
- }
-}
-$grp GenericEntity : "{84CBCE9163176B3E}Prefabs/Props/Wrecks/S105_wreck.et" {
- {
-  coords 2577.251 403.154 893.173
-  angleY -55.813
- }
- {
-  coords 1701.094 419.158 1103.294
-  angleX -4.139
-  angleY -106.356
-  angleZ 4.924
- }
+GenericEntity : "{84CBCE9163176B3E}Prefabs/Props/Wrecks/S105_wreck.et" {
+ coords 1701.094 419.158 1103.294
+ angleX -4.139
+ angleY -106.356
+ angleZ 4.924
 }
 GenericEntity : "{8B4B8BF44162B24E}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_US_01.et" {
  components {
@@ -18602,215 +16439,99 @@ GenericEntity : "{8B4B8BF44162B24E}Prefabs/Compositions/Slotted/SlotFlatSmall/An
    "faction affiliation" "NATO"
   }
  }
- coords 2926.254 421.875 587.735
-}
-GenericEntity : "{A13F6A7F82DF031B}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_US_01.et" {
- coords 2957.103 421.92 578.635
- angleY 27.146
+ coords 2002.571 434.365 1038.823
+ angleY -136
  {
   GenericEntity {
-   ID "5E6A9384DDD03956"
-   components {
-    SCR_FactionAffiliationComponent "{5CB8A6AD6CA2D332}" {
-     "faction affiliation" "NATO"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5E64C0FB916EAF90"
-   components {
-    SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
-     "faction affiliation" "NATO"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5E6906884A85A3A3"
-   components {
-    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-     "faction affiliation" "NATO"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5E64C0FB916EA309"
+   ID "5D088D25EF4020F0"
+   coords -0.004 0.1 2.063
    {
-    GenericEntity {
-     ID "5E64C0FA01642058"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0164205B"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01647BD1"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0167FF9B"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0164205A"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01647BCF"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FCB1C99422"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01642056"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01642240"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01647BD0"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0167FF9F"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA01642242"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5E64C0FA0167FF9D"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
+    DecalEntity {
+     ID "56E0B29E01E2AC90"
+     coords -0.001 -0.966 -0.001
     }
    }
+  }
+  GenericEntity {
+   ID "5D088D25EF40208B"
+   coords -3.229 0 4.057
+  }
+  GenericEntity {
+   ID "5D088D25EF402114"
+   coords -3.667 0 2.473
+  }
+  GenericEntity {
+   ID "5D088D25EF4020B9"
+   coords 0 0 0
+  }
+  GenericEntity {
+   ID "5D371AC87254ED3A"
+   coords 0 0 0
+  }
+  GenericEntity {
+   ID "5EA88D65C2A5898A"
+   coords -3.005 0.1 1.32
+  }
+  GenericEntity {
+   ID "5DCAAA1816D09E42"
+   coords -2.583 0.01 -2.04
+  }
+  GenericEntity {
+   ID "5DCAAA1816D09E6E"
+   coords 2.856 0.01 -0.099
+  }
+  GenericEntity {
+   ID "5D088D25EF4020D1"
+   coords -5.779 0.1 -1.598
+   {
+    DecalEntity {
+     ID "56DF08929A14FB98"
+     coords 0.001 0 0
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D088D25EF402134"
+   coords -4.076 0.1 -0.987
+   {
+    DecalEntity {
+     ID "56DF08929A14FB98"
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity {
+   ID "5EA88D65C2A58996"
+   coords -1.514 0.1 6.155
+  }
+  GenericEntity {
+   ID "5EA88D65C2A589AD"
+   coords 1.549 0.1 6.737
   }
  }
 }
 $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
  Flag_2 {
-  coords 1695.771 417.043 1122.336
+  components {
+   SlotManagerComponent "{628325B2556427B6}" {
+    Slots {
+     EntitySlotInfo SpawnPoint {
+      Enabled 0
+     }
+    }
+   }
+   ActionsManagerComponent "{628325B27ECAC8F5}" {
+    additionalActions {
+     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
+      Duration 30
+     }
+    }
+   }
+  }
+  coords 1690.535 417.52 1112.227
+  angleX 0.901
+  angleY 0.181
+  angleZ -1.787
   m_flagId 2
   m_previorusFlagId 1
   m_nextFlagId 3
@@ -18822,6 +16543,7 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
      Hierarchy "{628AF801F7ABF5FA}" {
      }
     }
+    coords 0 0 0
     TriggerShapeType Sphere
     SphereRadius 150
     TriggerActivationType "Every query"
@@ -18829,17 +16551,36 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
     UpdatePeriod 5
     PrefabsFilter {
      PrefabFilter "{628B520FD07CF939}" {
-      Prefab "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NATO_Player.et"
+      Prefab "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_US_USMC_Player.et"
      }
      PrefabFilter "{628B520FD0C36385}" {
-      Prefab "{9B452A52081470E3}Prefabs/Characters/AP6/RHS/Default_RUSSIA_Player.et"
+      Prefab "{9B452A52081470E3}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_USSR_MSV_Player.et"
      }
     }
    }
   }
  }
  Flag_3 {
-  coords 2161.47 434.034 1139.227
+  components {
+   SlotManagerComponent "{628325B2556427B6}" {
+    Slots {
+     EntitySlotInfo SpawnPoint {
+      Enabled 0
+     }
+    }
+   }
+   ActionsManagerComponent "{628325B27ECAC8F5}" {
+    additionalActions {
+     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
+      Duration 30
+     }
+    }
+   }
+  }
+  coords 1778.985 414.248 1146.232
+  angleX -1.182
+  angleY 6.251
+  angleZ 2.57
   m_flagId 3
   m_previorusFlagId 2
   m_nextFlagId 4
@@ -18851,6 +16592,7 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
      Hierarchy "{628AF801F0FB3917}" {
      }
     }
+    coords 2.518 0.427 -6.58
     TriggerShapeType Sphere
     SphereRadius 150
     TriggerActivationType "Every query"
@@ -18858,17 +16600,34 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
     UpdatePeriod 5
     PrefabsFilter {
      PrefabFilter "{628B520FDAFCCEF8}" {
-      Prefab "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NATO_Player.et"
+      Prefab "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_US_USMC_Player.et"
      }
      PrefabFilter "{628B520FDAAABE21}" {
-      Prefab "{9B452A52081470E3}Prefabs/Characters/AP6/RHS/Default_RUSSIA_Player.et"
+      Prefab "{9B452A52081470E3}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_USSR_MSV_Player.et"
      }
     }
    }
   }
  }
  Flag_4 {
-  coords 2578.653 403.335 900.901
+  components {
+   SlotManagerComponent "{628325B2556427B6}" {
+    Slots {
+     EntitySlotInfo SpawnPoint {
+      Enabled 0
+     }
+    }
+   }
+   ActionsManagerComponent "{628325B27ECAC8F5}" {
+    additionalActions {
+     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
+      Duration 30
+     }
+    }
+   }
+  }
+  coords 1873.303 416.256 1158.307
+  angleZ -7.125
   m_flagId 4
   m_previorusFlagId 3
   m_nextFlagId 5
@@ -18880,6 +16639,7 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
      Hierarchy "{628AF801EA13CF12}" {
      }
     }
+    coords 0 0 0
     TriggerShapeType Sphere
     SphereRadius 150
     TriggerActivationType "Every query"
@@ -18887,738 +16647,91 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
     UpdatePeriod 5
     PrefabsFilter {
      PrefabFilter "{628B520F922614E8}" {
-      Prefab "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NATO_Player.et"
+      Prefab "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_US_USMC_Player.et"
      }
      PrefabFilter "{628B520F83C0A1B3}" {
-      Prefab "{9B452A52081470E3}Prefabs/Characters/AP6/RHS/Default_RUSSIA_Player.et"
+      Prefab "{9B452A52081470E3}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_USSR_MSV_Player.et"
      }
     }
    }
   }
  }
  Flag_5 {
-  coords 2930.429 421.875 584.08
+  components {
+   ActionsManagerComponent "{628325B27ECAC8F5}" {
+    additionalActions {
+     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
+      Duration 30
+     }
+    }
+   }
+  }
+  coords 2006.046 434.376 1027.265
+  angleY 270
   m_ownerFactionKey "NATO"
   m_flagId 5
   m_previorusFlagId 4
   m_nextFlagId 6
   m_available 0
+  {
+   GenericEntity MM_Base_Nato : "{7FE30F5687748FDA}Prefabs/World/Locations/Common/Urban/LocationUrbanTown.et" {
+    components {
+     SCR_EditableCommentComponent "{529AB059519FE609}" {
+      m_UIInfo SCR_EditableCommentUIInfo "{5298E609432D192D}" {
+       Name "NATO Base"
+      }
+     }
+     SCR_MapDescriptorComponent "{527892B6ED748CEB}" {
+      DisplayName "Nato Base"
+     }
+    }
+   }
+  }
  }
  Flag_1 {
-  coords 1344.672 424.193 1502.6
+  components {
+   ActionsManagerComponent "{628325B27ECAC8F5}" {
+    additionalActions {
+     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
+      Duration 30
+     }
+    }
+   }
+  }
+  coords 1499.975 404.688 1124.575
+  angleY 90
   m_ownerFactionKey "RUSSIA"
   m_flagId 1
   m_nextFlagId 2
   m_available 0
+  {
+   GenericEntity MM_Base_Russia : "{7FE30F5687748FDA}Prefabs/World/Locations/Common/Urban/LocationUrbanTown.et" {
+    components {
+     SCR_EditableCommentComponent "{529AB059519FE609}" {
+      m_UIInfo SCR_EditableCommentUIInfo "{5298E609432D192D}" {
+       Name "Russia Base"
+      }
+     }
+     SCR_MapDescriptorComponent "{527892B6ED748CEB}" {
+      DisplayName "Russia Base"
+     }
+    }
+   }
+  }
  }
 }
 GenericEntity : "{A9CF5E8C5D91C476}Prefabs/Compositions/Misc/SubCompositions/Decorations/Barrel_Group_Crate_01.et" {
  coords 1689.135 416.219 1124.939
 }
-$grp GenericEntity : "{B31A14BC1A0E7776}Prefabs/Props/Military/Sandbags/Sandbag_01_round_burlap.et" {
- {
-  coords 2575.193 403.25 900.922
-  angleY -87.793
- }
- {
-  coords 2581.493 403.347 900.75
-  angleY 125.658
- }
+GenericEntity : "{B90E5414AB7C325B}Prefabs/Props/Wrecks/BTR70_wreck_static.et" {
+ coords 1758.039 415.52 1137.649
+ angleX -1.783
+ angleY -0.112
+ angleZ 3.578
 }
-$grp GenericEntity : "{BE16EE8FAA315FE2}Prefabs/Props/Military/Sandbags/Sandbag_01_long_high_burlap.et" {
- {
-  coords 1387.569 419.819 1495.676
-  angleX 8.187
-  angleY -37.664
-  angleZ 0.419
- }
- {
-  coords 1384.925 419.88 1493.832
-  angleX -8.594
-  angleY 147.299
-  angleZ -1.866
- }
- {
-  coords 1382.087 419.972 1491.852
-  angleX 8.874
-  angleY -34.702
-  angleZ 0.335
- }
- {
-  coords 1357.335 420.468 1472.85
-  angleX 7.68
-  angleY -30.655
-  angleZ 0.751
- }
- {
-  coords 1354.337 420.55 1471.323
-  angleX 6.86
-  angleY -22.219
-  angleZ 2.953
- }
- {
-  coords 1360.254 420.403 1474.723
-  angleX -6.918
-  angleY 146.353
-  angleZ -0.744
- }
- {
-  coords 1390.143 419.858 1497.937
-  angleX -8.841
-  angleY 137.666
-  angleZ 0.842
- }
- {
-  coords 1296.542 424.427 1456.669
-  angleX 0.394
-  angleY -144.905
-  angleZ -4.95
- }
- {
-  coords 1299.594 424.086 1455.323
-  angleX 2.435
-  angleY 16.239
-  angleZ 4.427
- }
- {
-  coords 1293.814 424.876 1458.565
-  angleX 0.646
-  angleY 37.672
-  angleZ 5.01
- }
-}
-GenericEntity : "{C75F144AD8ED67F5}Prefabs/Props/Military/Compositions/US/FuelService_US.et" {
- components {
-  SCR_FactionAffiliationComponent "{5CB8A6AD6CA2D332}" {
-   "faction affiliation" "NATO"
-  }
- }
- coords 2931.991 421.797 601.001
- angleY -150.385
-}
-$grp DecalEntity : "{D1D104EBCB9C5E2D}Prefabs/Decals/Miscellaneous/Decal_Damage_Burnt_02.et" {
- {
-  coords 2198.522 432.926 1148.188
-  angleX -90
-  angleY 0
-  angleZ 0
-  scale 10
- }
- {
-  coords 2193.18 432.989 1148.586
-  angleX -90
-  angleY 180
-  angleZ 68.147
-  scale 10
- }
-}
-GenericEntity : "{D6711114DE2407D8}Prefabs/Props/VehicleParts/Tires/Tire_BTR70_pile.et" {
- coords 2161.096 433.452 1134.809
-}
-GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_US_01.et" {
- components {
-  FactionAffiliationComponent "{5D06E95AEE988B60}" {
-   "faction affiliation" "NATO"
-  }
- }
- coords 2900.99 421.989 580.552
- angleY 47.382
- {
-  GenericEntity {
-   ID "5E690689EC0B4D5B"
-   components {
-    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-     "faction affiliation" "NATO"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D22B94009C6AE81"
-   components {
-    SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
-     "faction affiliation" "NATO"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D45393A2E695E30"
-   {
-    GenericEntity {
-     ID "5D45393A70285E7C"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393A70285E70"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393A70285E7E"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393A70285E77"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393A70285E79"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393A70285E75"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-   }
-  }
- }
-}
-SCR_DestructibleBuildingEntity : "{F50905235FBAA094}Prefabs/Structures/Military/Houses/GuardBox_01/GuardBox_01_beige.et" {
- coords 2142.148 0.108 1171.209
- angleY 159.817
-}
-GenericEntity : "{FB18EFE9C1A81E29}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_US_01.et" {
- components {
-  FactionAffiliationComponent "{5E38DC8C378BCC8A}" {
-   "faction affiliation" "NATO"
-  }
- }
- coords 2924.101 422 566.344
- {
-  GenericEntity {
-   ID "5D22B941BA4ECAA0"
-   components {
-    SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
-     "faction affiliation" "NATO"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5E690688EBC16840"
-   components {
-    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-     "faction affiliation" "NATO"
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D45393CCD2480D9"
-   {
-    GenericEntity {
-     ID "5D45393CC4945415"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49454E3"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49454E5"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49454FA"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49480FB"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49454EB"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49480FA"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49454E6"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49480FE"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49480F6"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49454E2"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49454E4"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49454E7"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49480F4"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49480FF"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC4945410"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393CC49480F3"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D45393D583117FF"
-   {
-    GenericEntity {
-     ID "5D45393D531BB51D"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D531BB51F"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D531BB50B"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D531BB510"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D531BB513"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D45393D15FC29B1"
-   {
-    GenericEntity {
-     ID "5D45393D0EB55AAE"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB5370E"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB5371C"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB53701"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB53715"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB5371E"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB55AA8"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB53706"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB55AD0"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB53713"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB55AAB"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393D0EB5370C"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1000
-         m_fResourceValueMax 1000
-        }
-       }
-      }
-     }
-    }
-   }
-  }
- }
-}
-$grp SCR_DestructibleBuildingEntity : "{FBCE1861B987EA68}Prefabs/Structures/Military/Houses/GuardTower_01/GuardTower_01.et" {
- {
-  coords 2203.365 -1.151 1159.125
-  angleY 161.329
- }
- {
-  coords 2119.025 -1.182 1115.832
-  angleY 145.032
- }
+GenericEntity : "{EB084C400AABD1D3}Prefabs/Props/Wrecks/M151A2_wreck.et" {
+ coords 1772.944 420.157 1101.891
+ angleX -2.067
+ angleY -83.858
+ angleZ 2.476
 }

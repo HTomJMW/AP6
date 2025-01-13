@@ -6,13 +6,11 @@ SCR_ChimeraCharacter : "{9B452A52081470E3}Prefabs/Characters/Campaign/RHS/Confli
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "Autorifleman"
-    Icon "{EF1F445746A3391A}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_MachineGunner.edds"
-    m_aAutoLabels {
-     122 43
-    }
+    Name "Rifleman"
+    Icon "{A489F552FB7489C3}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_Custom.edds"
    }
    m_VariantData SCR_EditableEntityVariantData "{60F6B83ED4C13CC3}" {
+    m_bRandomizeDefaultVariant 0
     m_aVariants {
      SCR_EditableEntityVariant "{60F6B83ED3FB7538}" {
       m_bEnabled 0
@@ -24,7 +22,7 @@ SCR_ChimeraCharacter : "{9B452A52081470E3}Prefabs/Characters/Campaign/RHS/Confli
    WeaponTemplate "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   WeaponTemplate "{FB4C5D429348F1A2}Prefabs/Weapons/MachineGuns/RPK74M/MG_RPK74M_NPZ.et"
+   WeaponTemplate "{7701C6F717D852C6}Prefabs/Weapons/Rifles/AK74M/Rifle_AK74M_npz_rail_camo.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
    WeaponTemplate "{A8B4089ACB473848}Prefabs/Weapons/Handguns/MP443/Handgun_MP443.et"
@@ -48,17 +46,17 @@ SCR_ChimeraCharacter : "{9B452A52081470E3}Prefabs/Characters/Campaign/RHS/Confli
     }
     ItemsInitConfigurationItem "{5ED519BE771B5ECB}" {
      PrefabsToSpawn {
-      "{9FA7BF7227AF0CC2}Prefabs/Weapons/Magazines/6l26/Magazine_545x39_plastic_6l26_45_last5tracer.et" "{9FA7BF7227AF0CC2}Prefabs/Weapons/Magazines/6l26/Magazine_545x39_plastic_6l26_45_last5tracer.et" ""
+      "{0FD71EAC637C1624}Prefabs/Weapons/Magazines/6l23_plastic/Magazine_545x39_plastic_AK_30rnd_Last_5Tracer_camo.et" "{0FD71EAC637C1624}Prefabs/Weapons/Magazines/6l23_plastic/Magazine_545x39_plastic_AK_30rnd_Last_5Tracer_camo.et" ""
      }
     }
     ItemsInitConfigurationItem "{5ED519BE77D6E1A1}" {
      PrefabsToSpawn {
-      "{9FA7BF7227AF0CC2}Prefabs/Weapons/Magazines/6l26/Magazine_545x39_plastic_6l26_45_last5tracer.et" "{9FA7BF7227AF0CC2}Prefabs/Weapons/Magazines/6l26/Magazine_545x39_plastic_6l26_45_last5tracer.et"
+      "{0FD71EAC637C1624}Prefabs/Weapons/Magazines/6l23_plastic/Magazine_545x39_plastic_AK_30rnd_Last_5Tracer_camo.et" "{0FD71EAC637C1624}Prefabs/Weapons/Magazines/6l23_plastic/Magazine_545x39_plastic_AK_30rnd_Last_5Tracer_camo.et" ""
      }
     }
     ItemsInitConfigurationItem "{5ED519BE5A94F8B0}" {
      PrefabsToSpawn {
-      "{D2E91B2DD0D3EF30}Prefabs/Weapons/Magazines/MP443/Magazine_9x19_MP443_17rnd_7N21.et" "{D2E91B2DD0D3EF30}Prefabs/Weapons/Magazines/MP443/Magazine_9x19_MP443_17rnd_7N21.et" "{D2E91B2DD0D3EF30}Prefabs/Weapons/Magazines/MP443/Magazine_9x19_MP443_17rnd_7N21.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{9FA7BF7227AF0CC2}Prefabs/Weapons/Magazines/6l26/Magazine_545x39_plastic_6l26_45_last5tracer.et" "{9FA7BF7227AF0CC2}Prefabs/Weapons/Magazines/6l26/Magazine_545x39_plastic_6l26_45_last5tracer.et"
+      "{D2E91B2DD0D3EF30}Prefabs/Weapons/Magazines/MP443/Magazine_9x19_MP443_17rnd_7N21.et" "{D2E91B2DD0D3EF30}Prefabs/Weapons/Magazines/MP443/Magazine_9x19_MP443_17rnd_7N21.et" "{D2E91B2DD0D3EF30}Prefabs/Weapons/Magazines/MP443/Magazine_9x19_MP443_17rnd_7N21.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{0FD71EAC637C1624}Prefabs/Weapons/Magazines/6l23_plastic/Magazine_545x39_plastic_AK_30rnd_Last_5Tracer_camo.et" "{0FD71EAC637C1624}Prefabs/Weapons/Magazines/6l23_plastic/Magazine_545x39_plastic_AK_30rnd_Last_5Tracer_camo.et"
      }
     }
     ItemsInitConfigurationItem "{5ED519BE5B4BF6C1}" {
