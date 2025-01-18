@@ -8,7 +8,7 @@ class SCR_AP6_GameMode : SCR_BaseGameMode
 	[Attribute(defvalue: "true", uiwidget: UIWidgets.CheckBox, desc: "Enables defender AIs near flags.", category: "AP6 GameMode")]
 	protected bool m_EnableAIs;
 	
-	protected string version = "0.7.11";
+	protected string version = "0.7.20";
 	
 	protected ref array<SCR_AP6_Flag> m_flags = {};
 	
