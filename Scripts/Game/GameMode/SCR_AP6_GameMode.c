@@ -8,7 +8,7 @@ class SCR_AP6_GameMode : SCR_BaseGameMode
 	[Attribute(defvalue: "true", uiwidget: UIWidgets.CheckBox, desc: "Enables defender AIs near flags.", category: "AP6 GameMode")]
 	protected bool m_EnableAIs;
 	
-	protected string version = "0.7.20";
+	protected string version = "0.7.51";
 	
 	protected ref array<SCR_AP6_Flag> m_flags = {};
 	
@@ -78,24 +78,6 @@ class SCR_AP6_GameMode : SCR_BaseGameMode
 		super.OnPlayerDisconnected(playerId, cause, timeout);
 		
 		m_playersDeathTimes.Remove(playerId);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	override void OnPlayerRegistered(int playerId)
-	{
-		super.OnPlayerRegistered(playerId);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	override void OnPlayerAuditSuccess(int iPlayerID)
-	{
-		super.OnPlayerAuditSuccess(iPlayerID);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	override void OnPlayerSpawnFinalize_S(SCR_SpawnRequestComponent requestComponent, SCR_SpawnHandlerComponent handlerComponent, SCR_SpawnData data, IEntity entity)
-	{
-		super.OnPlayerSpawnFinalize_S(requestComponent, handlerComponent, data, entity);
 	}
 
 	//------------------------------------------------------------------------------------------------

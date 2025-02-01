@@ -1,0 +1,9 @@
+MatPBRBasic {
+ Color 0.68 0.581 0.105 1
+ CastShadow 0
+ ReceiveShadow 0
+ OccludeRain 0
+ OccludeWetness 0
+ AlphaMul 0
+ BlendMode AlphaBlend
+}

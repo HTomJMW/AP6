@@ -1,0 +1,36 @@
+MetaFileClass {
+ Name "{016EE162FE73369F}Assets/Invisible/InteractionHelper.xob"
+ Configurations {
+  FBXResourceClass PC {
+   MaterialAssigns {
+    MaterialAssignClass "{64736CA0554EDA40}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{8E49098C86A2B35E}Assets/Invisible/Data/Material.emat"
+    }
+   }
+   MeshParams {
+    MeshParam InteractionHelper {
+    }
+   }
+   GeometryParams {
+    GeometryParam UCL_InteractionHelper {
+     LayerPreset "Interaction"
+     SurfaceProperties {
+      "{2E98E99A11C6F632}Common/Materials/Game/Core/AP6_None.gamemat"
+     }
+     Mass 0
+    }
+   }
+  }
+  FBXResourceClass XBOX_ONE : PC {
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+  }
+  FBXResourceClass PS4 : PC {
+  }
+  FBXResourceClass PS5 : PC {
+  }
+  FBXResourceClass HEADLESS : PC {
+  }
+ }
+}

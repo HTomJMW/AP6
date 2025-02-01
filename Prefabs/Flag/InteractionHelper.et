@@ -1,0 +1,48 @@
+GenericEntity {
+ ID "6466D8877DA6A7C9"
+ components {
+  MeshObject "{6466D8877DA6A7F9}" {
+   Object "{016EE162FE73369F}Assets/Invisible/InteractionHelper.xob"
+   CastShadow 0
+   CastFarShadow 0
+   RainOccluder 0
+   WetnessOccluder 0
+   ReceiveLight 0
+   BoundingBox AABBBoundingVolume "{64736CA19AC76D02}" {
+    Mins -0.375 -0.625 -0.375
+    Maxs 0.375 0.625 0.375
+   }
+  }
+  RigidBody "{6466D8877DA6A808}" {
+   SimState None
+   ResponseIndex "NoCollision"
+   ModelGeometry 1
+   Static 1
+  }
+  ActionsManagerComponent "{6466D8877DA6A824}" {
+   ActionContexts {
+    UserActionContext "{6466D8877DA6A821}" {
+     ContextName "InteractionHelperContext"
+     Position PointInfo "{6466D8877DA6A823}" {
+     }
+     Radius 2
+     Height 3
+    }
+   }
+   additionalActions {
+    SCR_AP6_TakeFlagAction "{6466D8877DA6A82B}" {
+     ParentContextList {
+      "InteractionHelperContext"
+     }
+     VisibilityRange 1.5
+     Duration 25
+    }
+   }
+  }
+  RplComponent "{6466D8877DA6A834}" {
+  }
+  Hierarchy "{6466D8877DA6A836}" {
+  }
+ }
+ Flags 2
+}

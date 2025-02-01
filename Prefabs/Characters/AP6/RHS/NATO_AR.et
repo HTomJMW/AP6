@@ -8,23 +8,23 @@ SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Confli
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Autorifleman"
     Icon "{EF1F445746A3391A}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_MachineGunner.edds"
+    m_sFaction "NATO"
+    m_aAuthoredLabels {
+     70 2
+    }
     m_aAutoLabels {
      122 43
     }
    }
    m_VariantData SCR_EditableEntityVariantData "{60F6B2B4BAE04806}" {
-    m_aVariants {
-     SCR_EditableEntityVariant "{60F6B2B4B9D3CC9B}" {
-      m_bEnabled 0
-     }
-    }
+    m_bRandomizeDefaultVariant 0
    }
   }
   CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
    WeaponTemplate "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   WeaponTemplate "{BAE271374368C0D6}Prefabs/Weapons/MachineGuns/M249/MG_M249_RISTop_Base.et"
+   WeaponTemplate "{D2B48DEBEF38D7D7}Prefabs/Weapons/MachineGuns/M249/MG_M249.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
    WeaponTemplate "{E998FA484B0C4BFF}Prefabs/Weapons/Handguns/Glock/Handgun_Glock17.et"
@@ -44,8 +44,8 @@ SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Confli
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{54A49B42D138207E}" {
-     PrefabsToSpawn + {
-      "{BEE3897D2286992A}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_M855A1_4Ball_1Tracer.et" "" ""
+     PrefabsToSpawn {
+      "" "" "" "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et" "" ""
      }
     }
     ItemsInitConfigurationItem "{5538C040738A83D1}" {

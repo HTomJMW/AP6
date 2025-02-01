@@ -468,9 +468,11 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
   SCR_EntityCatalogManagerComponent "{6285455B39D7EBEB}" {
    m_aEntityCatalogs {
     SCR_EntityCatalog "{6287159EF645F7AE}" {
-     m_eEntityCatalogType ITEM
+     m_eEntityCatalogType SUPPLY_CONTAINER_ITEM
     }
    }
+  }
+  SCR_GameGameModeStateComponent "{6482952AE552BEA7}" {
   }
   SCR_GameModeHealthSettings "{627D1B7790804988}" {
   }
@@ -1503,7 +1505,6 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
   SCR_PossessingManagerComponent "{627D1B779080DC93}" {
   }
   SCR_RadialMenuGameModeComponent "{627D1B779080DCF5}" {
-   Enabled 0
    m_Menu SCR_RadialMenu "{627D1B779080DCF4}" {
     m_Inputs SCR_RadialMenuInputs "{627D1B779080DCF3}" {
      m_iGamepadDeselectionDelay 400
@@ -1524,7 +1525,7 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
   }
   SCR_RespawnBriefingComponent "{628CF6EA08B9335F}" {
    m_Info SCR_UIInfo "{628CF6EA0216F70B}" {
-    Name "Arma Reforger AP6 v0.7.20"
+    Name "Arma Reforger AP6 v0.7.51"
     Description "by [H] Tom"
     Icon "{3C50D67D082BA322}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_2_UI.edds"
    }
@@ -1543,6 +1544,8 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
    m_fDeployMenuOpenDelay 2
   }
   SCR_RespawnTimerComponent "{6288F8033ACF81B1}" {
+  }
+  SCR_ScoringSystemComponent "{6482952A65D7C083}" {
   }
   SCR_SpawnerAIGroupManagerComponent "{627D1B779080DC39}" {
   }
@@ -1649,9 +1652,10 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
  Flags 0
  m_eTestGameFlags 6
  m_bAllowFactionChange 0
+ m_fAutoReloadTime 15
  m_EnableAIs 0
 }
-SCR_CampaignFactionManager CampaignFactionManager {
+SCR_FactionManager CampaignFactionManager {
  components {
   SCR_DelegateFactionManagerComponent "{627D1B7E80D431DF}" {
    m_FactionDelegatePrefab "{94D481BAEC3B8573}PrefabsEditable/System/E_FactionDelegate.et"
@@ -3244,45 +3248,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
        }
       }
      }
-     m_aMultiLists {
-      SCR_EntityCatalogMultiListEntry "{627D1B7E80DAFB39}" {
-       m_sIdentifier "Campaign"
-       m_aEntities {
-        SCR_EntityCatalogEntry "{627D1B7E80DAFB38}" {
-         m_sEntityPrefab "{F063CEEB9295E9B6}Prefabs/Characters/Campaign/Final/Campaign_USSR_Player.et"
-         m_aEntityDataList {
-          SCR_EntityCatalogSpawnerData "{627D1B7E80DAFB3C}" {
-           m_eSlotTypes GROUP_SMALL
-          }
-          SCR_EntityCatalogLoadoutData "{627D1B7E80DAFB3F}" {
-           m_fSpawnSupplyCost 20
-          }
-         }
-        }
-       }
-      }
-      SCR_EntityCatalogMultiListEntry "{627D1B7E80DAFB24}" {
-       m_sIdentifier "Variants"
-       m_aEntities {
-        SCR_EntityCatalogEntry "{627D1B7E80DAFB2C}" {
-         m_sEntityPrefab "{069118B2D809C9E1}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman_Variant_1.et"
-         m_aEntityDataList {
-          SCR_EntityCatalogLoadoutData "{627D1B7E80DAFB33}" {
-           m_fSpawnSupplyCost 20
-          }
-         }
-        }
-        SCR_EntityCatalogEntry "{627D1B7E80DAFB2B}" {
-         m_sEntityPrefab "{4F7E0952D726FB43}Prefabs/Characters/Campaign/Final/PlayerVariant/Campaign_USSR_Player_Variant_1.et"
-         m_aEntityDataList {
-          SCR_EntityCatalogLoadoutData "{627D1B7E80DAFB2A}" {
-           m_fSpawnSupplyCost 20
-          }
-         }
-        }
-       }
-      }
-     }
     }
     SCR_EntityCatalogMultiList "{627D1B7E80DC15B6}" {
      m_eEntityCatalogType VEHICLE
@@ -3333,6 +3298,9 @@ SCR_CampaignFactionManager CampaignFactionManager {
            m_eSlotTypes 24
           }
          }
+        }
+        SCR_EntityCatalogEntry "{6482B002D9E5A4B2}" {
+         m_sEntityPrefab "{4597626AF36C0858}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320.et"
         }
         SCR_EntityCatalogEntry "{627D1B7E80DBC3C8}" {
          m_sEntityPrefab "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et"
@@ -7514,45 +7482,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
        }
       }
      }
-     m_aMultiLists {
-      SCR_EntityCatalogMultiListEntry "{627D1B7E802DBD85}" {
-       m_sIdentifier "Campaign"
-       m_aEntities {
-        SCR_EntityCatalogEntry "{627D1B7E802DBD84}" {
-         m_sEntityPrefab "{8D89B17BCFBFAE44}Prefabs/Characters/Campaign/Final/Campaign_US_Player.et"
-         m_aEntityDataList {
-          SCR_EntityCatalogSpawnerData "{627D1B7E802C484E}" {
-           m_eSlotTypes GROUP_SMALL
-          }
-          SCR_EntityCatalogLoadoutData "{627D1B7E802C484B}" {
-           m_fSpawnSupplyCost 20
-          }
-         }
-        }
-       }
-      }
-      SCR_EntityCatalogMultiListEntry "{627D1B7E802DFA60}" {
-       m_sIdentifier "Variants"
-       m_aEntities {
-        SCR_EntityCatalogEntry "{627D1B7E802DBDB0}" {
-         m_sEntityPrefab "{EA158B6EB6A24B4B}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman_Variant_1.et"
-         m_aEntityDataList {
-          SCR_EntityCatalogLoadoutData "{627D1B7E802DBDB3}" {
-           m_fSpawnSupplyCost 20
-          }
-         }
-        }
-        SCR_EntityCatalogEntry "{627D1B7E802DBDB8}" {
-         m_sEntityPrefab "{07B92B5E1A781635}Prefabs/Characters/Campaign/Final/PlayerVariant/Campaign_US_Player_Variant_1.et"
-         m_aEntityDataList {
-          SCR_EntityCatalogLoadoutData "{627D1B7E802DBDBB}" {
-           m_fSpawnSupplyCost 20
-          }
-         }
-        }
-       }
-      }
-     }
     }
     SCR_EntityCatalogMultiList "{627D1B7E80306F46}" {
      m_eEntityCatalogType VEHICLE
@@ -8353,53 +8282,11 @@ SCR_CampaignFactionManager CampaignFactionManager {
           }
          }
         }
-        SCR_EntityCatalogInventoryItem "{628D1667288E5CCB}" {
-         m_sEntityPrefab "{24A824857ADC84CF}Prefabs/Weapons/MachineGuns/M240/MG_M240_Light.et"
-         m_aEntityDataList {
-          SCR_ArsenalItem "{628D1666AB8316AF}" {
-           m_eItemType MACHINE_GUN
-           m_eItemMode WEAPON
-           m_iSupplyCost 0
-          }
-         }
-        }
         SCR_EntityCatalogInventoryItem "{628D1666967FCA58}" {
-         m_sEntityPrefab "{599A1E833BEF3A44}Prefabs/Weapons/MachineGuns/M249/MG_M249_base.et"
+         m_sEntityPrefab "{D2B48DEBEF38D7D7}Prefabs/Weapons/MachineGuns/M249/MG_M249.et"
          m_aEntityDataList {
           SCR_ArsenalItem "{628D166684B9FB00}" {
            m_eItemType MACHINE_GUN
-           m_eItemMode WEAPON
-           m_iSupplyCost 0
-          }
-         }
-        }
-        SCR_EntityCatalogInventoryItem "{628D166696966CB5}" {
-         m_sEntityPrefab "{BAE271374368C0D6}Prefabs/Weapons/MachineGuns/M249/MG_M249_RISTop_Base.et"
-         m_aEntityDataList {
-          SCR_ArsenalItem "{628D1666F5CA8131}" {
-           m_eItemType MACHINE_GUN
-           m_eItemMode WEAPON
-           m_iSupplyCost 0
-          }
-         }
-        }
-        SCR_EntityCatalogInventoryItem "{628D166695C05CEB}" {
-         m_sEntityPrefab "{6EB3A5496BAFC8F3}Prefabs/Weapons/Launchers/MK153/Launcher_MK153mod2_base.et"
-         m_bEnabled 0
-         m_aEntityDataList {
-          SCR_ArsenalItem "{628D1666D3196742}" {
-           m_eItemType ROCKET_LAUNCHER
-           m_eItemMode WEAPON
-           m_iSupplyCost 0
-          }
-         }
-        }
-        SCR_EntityCatalogInventoryItem "{628D166694D2A4A5}" {
-         m_sEntityPrefab "{35022055DCDDE98B}Prefabs/Weapons/Launchers/MK153/Launcher_MK153mod2.et"
-         m_bEnabled 0
-         m_aEntityDataList {
-          SCR_ArsenalItem "{628D1666C6E44BB1}" {
-           m_eItemType ROCKET_LAUNCHER
            m_eItemMode WEAPON
            m_iSupplyCost 0
           }
@@ -8568,18 +8455,8 @@ SCR_CampaignFactionManager CampaignFactionManager {
           }
          }
         }
-        SCR_EntityCatalogInventoryItem "{628D1661110C8631}" {
-         m_sEntityPrefab "{8E9682666CB56092}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_base.et"
-         m_aEntityDataList {
-          SCR_ArsenalItem "{628D167E98085AFA}" {
-           m_eItemType MACHINE_GUN
-           m_eItemMode AMMUNITION
-           m_iSupplyCost 0
-          }
-         }
-        }
         SCR_EntityCatalogInventoryItem "{628D16611023108F}" {
-         m_sEntityPrefab "{E8E9972833CB4203}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_M855A1_Ball.et"
+         m_sEntityPrefab "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et"
          m_aEntityDataList {
           SCR_ArsenalItem "{628D167E97C7756D}" {
            m_eItemType MACHINE_GUN
@@ -8589,19 +8466,9 @@ SCR_CampaignFactionManager CampaignFactionManager {
          }
         }
         SCR_EntityCatalogInventoryItem "{628D16610F343808}" {
-         m_sEntityPrefab "{BEE3897D2286992A}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_M855A1_4Ball_1Tracer.et"
+         m_sEntityPrefab "{4EEDDB27C023B8B9}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_Tracer.et"
          m_aEntityDataList {
           SCR_ArsenalItem "{628D167E9686D4C3}" {
-           m_eItemType MACHINE_GUN
-           m_eItemMode AMMUNITION
-           m_iSupplyCost 0
-          }
-         }
-        }
-        SCR_EntityCatalogInventoryItem "{628D16610F8BB48B}" {
-         m_sEntityPrefab "{29B4A8BC2B8303C6}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_M855A1_base.et"
-         m_aEntityDataList {
-          SCR_ArsenalItem "{628D167E948D621D}" {
            m_eItemType MACHINE_GUN
            m_eItemMode AMMUNITION
            m_iSupplyCost 0
@@ -8889,17 +8756,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
          m_aEntityDataList {
           SCR_ArsenalItem "{645114B43CDC779C}" {
            m_eItemType MACHINE_GUN
-           m_eItemMode AMMUNITION
-           m_iSupplyCost 0
-          }
-         }
-        }
-        SCR_EntityCatalogInventoryItem "{628D167BD1D45EFD}" {
-         m_sEntityPrefab "{0244BAD13DBCC9FE}Prefabs/Weapons/Ammo/MK153/RHS_AmmoRocket_MK153_HEDP.et"
-         m_aEntityDataList {
-          SCR_ArsenalItem "{628D167B3E5AEC65}" {
-           m_bEnabled 0
-           m_eItemType ROCKET_LAUNCHER
            m_eItemMode AMMUNITION
            m_iSupplyCost 0
           }
@@ -11648,6 +11504,7 @@ SCR_CampaignFactionManager CampaignFactionManager {
    m_NotificationFactionColor 0 0.44 0.078 1
    m_NotificationTextFactionColor 0 0.296 0.055 1
    m_bIsPlayable 0
+   m_bShowInWelcomeScreenIfNonPlayable 0
    m_sFactionFlag "{B784E694BA4A7D40}UI/Textures/Flags/Everon-flag-base-3it.edds"
    m_FactionFlagMaterial "{9BE1341F99D33483}Assets/Props/Fabric/Flags/Data/Flag_1_2_EVERON.emat"
    m_FactionLabel FACTION_FIA
@@ -13833,7 +13690,7 @@ SCR_CampaignFactionManager CampaignFactionManager {
    m_FactionFlagMaterial "{E3BB2EF7F600DD28}Assets/Props/Fabric/Flags/Data/Flag_2_3_CIVILIAN.emat"
    m_FactionLabel FACTION_CIV
    m_aFriendlyFactionsIds {
-    "US" "USSR" "FIA" "RHS_USAF" "RHS_AFRF" "RHS_ION" "RHS_USAF" "RHS_AFRF" "RHS_ION"
+    "NATO" "RUSSIA" "FIA"
    }
    m_CallsignInfo SCR_FactionCallsignInfo "{627D1B7E800712E1}" {
     m_bIsAssignedRandomly 0
@@ -15895,24 +15752,6 @@ SCR_CampaignFactionManager CampaignFactionManager {
    }
    m_sFactionBackground "{781301447441F404}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_Civilian.imageset"
   }
-  SCR_Faction "{628B793455F33561}" {
-   FactionKey "RHS_USAF"
-   FactionColor 0.016 0.552 0.905 1
-   m_bIsPlayable 0
-   m_bShowInWelcomeScreenIfNonPlayable 0
-   m_aFriendlyFactionsIds {
-    "NATO"
-   }
-  }
-  SCR_Faction "{628B793446DC752E}" {
-   FactionKey "RHS_AFRF"
-   FactionColor 0.855 0.031 0.028 1
-   m_bIsPlayable 0
-   m_bShowInWelcomeScreenIfNonPlayable 0
-   m_aFriendlyFactionsIds {
-    "RUSSIA"
-   }
-  }
  }
  m_bCanChangeFactionsPlayable 0
  m_aRanks {
@@ -16001,6 +15840,7 @@ ScriptedChatEntity ScriptedChatEntity {
  "Whisper channel" PrivateMessageChannel "{627D1B75EA5EBBD4}" {
   "Channel name" "Whisper"
  }
+ "Default channel" "Faction"
 }
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 0 0 0
@@ -16009,7 +15849,7 @@ BasePreloadManager BasePreloadManager {
 }
 ItemPreviewManagerEntity ItemPreviewManagerEntity {
  PreviewWorld "{4391FE7994EE6FE2}Prefabs/World/Game/InventoryPreviewWorld.et"
- DefaultRenderAttributes PreviewRenderAttributes "{627D1B76994AC474}" {
+ DefaultRenderAttributes SCR_CharacterInventoryPreviewAttributes "{648295295EC667C6}" {
  }
 }
 SCR_LoadoutManager SCR_LoadoutManager {
@@ -16167,6 +16007,27 @@ $grp Tree : "{23C0BE9D80929DBD}Prefabs/Vegetation/Bush/b_salix_cinerea_1w.et" {
   coords 1846.963 0 1208.918
  }
 }
+$grp DecalEntity : "{2566A36AF43E9F9E}Prefabs/Decals/Dirt/Decal_Dirt_Patch_06.et" {
+ {
+  coords 1778.951 0.111 1146.184
+  angleX -90
+  scale 2
+ }
+ {
+  coords 1690.401 0.082 1112.359
+  angleX -90
+  angleY 180
+  angleZ 117.968
+  scale 2
+ }
+ {
+  coords 1873.349 0.006 1158.308
+  angleX -90
+  angleY 180
+  angleZ 29.52
+  scale 2
+ }
+}
 GenericEntity : "{25B265F3E7CBDFC8}Prefabs/Props/Wrecks/BMP1_wreck.et" {
  coords 1854.796 424.014 1089.191
  angleX -5.975
@@ -16214,6 +16075,9 @@ GenericEntity : "{3F0D0593590519DA}Prefabs/Props/Garbage/Tires/TirePile_01_mediu
 }
 Vehicle Ural1 : "{4597626AF36C0858}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320.et" {
  components {
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "FIA"
+  }
   ActionsManagerComponent "{C97BE5489221AE18}" {
    Enabled 0
   }
@@ -16222,14 +16086,6 @@ Vehicle Ural1 : "{4597626AF36C0858}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320.et
  angleX -3.509
  angleY -55.214
  angleZ 1.915
-}
-Vehicle Ural4320_tanker_CIV_orange1 : "{4A59DAEFE645E8A0}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker_CIV_orange.et" {
- components {
-  ActionsManagerComponent "{C97BE5489221AE18}" {
-   Enabled 0
-  }
- }
- coords 1870.319 412.208 1187.688
 }
 Vehicle S1203_transport_beige1 : "{543799AC5C52989C}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige.et" {
  components {
@@ -16250,7 +16106,7 @@ Vehicle S105_beige1 : "{54C3CC22DEBD57BE}Prefabs/Vehicles/Wheeled/S105/S105_beig
  angleY -30.883
 }
 Tree : "{585B412BC51E59F3}Prefabs/Vegetation/Bush/b_juniperus_communis_1s.et" {
- coords 1639.69 -0 1074.227
+ coords 1639.69 0 1074.227
 }
 Tree : "{5C594649DBDD5EAE}Prefabs/Vegetation/Tree/t_betula_pendula_2s.et" {
  coords 1665.026 0 1012.058
@@ -16304,7 +16160,7 @@ $grp Tree : "{63DC62906A5917F3}Prefabs/Vegetation/Tree/t_populus_nigra_3s.et" {
   scale 0.745
  }
  {
-  coords 1806.148 -0 1073.193
+  coords 1806.148 0 1073.193
   scale 0.772
  }
  {
@@ -16333,6 +16189,11 @@ GenericEntity : "{68ED84218EA1BDC3}Prefabs/Compositions/Slotted/SlotFlatSmall/An
  {
   GenericEntity {
    ID "5D371AC8408F65B6"
+   components {
+    SCR_FactionAffiliationComponent "{5CB6D5B3749D59C3}" {
+     "faction affiliation" "RUSSIA"
+    }
+   }
    coords 0 0.158 0
   }
   GenericEntity {
@@ -16417,14 +16278,17 @@ GenericEntity : "{6BE5C753730DBFED}Prefabs/Props/Wrecks/M923A1_wreck_static.et" 
 }
 $grp Tree : "{6C788B70DF94793B}Prefabs/Vegetation/Tree/t_salix_fragilis_2s.et" {
  {
-  coords 1904.002 -0 1216.132
+  coords 1904.002 0 1216.132
  }
  {
-  coords 1871.644 -0 1093.933
+  coords 1871.644 0 1093.933
  }
 }
 Vehicle UH1H1 : "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et" {
  components {
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "NATO"
+  }
   ActionsManagerComponent "{C97BE5489221AE18}" {
    Enabled 0
   }
@@ -16433,6 +16297,10 @@ Vehicle UH1H1 : "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et" {
  angleX 0.773
  angleY -116.924
  angleZ -4.4
+}
+SCR_DestructibleBuildingEntity : "{74FAABE8512145EF}Prefabs/Structures/Industrial/Repair/RampVehicle_01/RampVehicle_01_metal.et" {
+ coords 1618.435 0 1050.251
+ angleY -5.335
 }
 $grp GenericEntity : "{7AF4B627D5C90235}Prefabs/Props/Military/Sandbags/Sandbag_01_round_high_burlap.et" {
  {
@@ -16684,7 +16552,7 @@ $grp Tree : "{87BE91E8E84DA493}Prefabs/Vegetation/Tree/t_alnus_glutinosa_2s.et" 
   coords 1629.098 0 1109.463
  }
  {
-  coords 1716.281 -0 1011.412
+  coords 1716.281 0 1011.412
  }
 }
 GenericEntity : "{8B4B8BF44162B24E}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_US_01.et" {
@@ -16720,6 +16588,11 @@ GenericEntity : "{8B4B8BF44162B24E}Prefabs/Compositions/Slotted/SlotFlatSmall/An
   }
   GenericEntity {
    ID "5D371AC87254ED3A"
+   components {
+    SCR_FactionAffiliationComponent "{5CB6D5B3749D59C3}" {
+     "faction affiliation" "NATO"
+    }
+   }
    coords 0 0 0
   }
   GenericEntity {
@@ -16771,10 +16644,10 @@ GenericEntity : "{8F08705D73A7C711}Prefabs/Props/Industrial/CargoContainers/Carg
  angleZ 2.399
 }
 Tree : "{8F91FCAFE65FCDA6}Prefabs/Vegetation/Tree/t_carpinus_betulus_3s.et" {
- coords 1704.162 -0 1046.585
+ coords 1704.162 0 1046.585
 }
 Tree : "{9025E96A11516E7A}Prefabs/Vegetation/Bush/b_juniperus_communis_2w.et" {
- coords 1851.248 -0 1090.261
+ coords 1851.248 0 1090.261
  scale 0.84
 }
 SCR_DestructibleBuildingEntity : "{9AFEA6170EF9055F}Prefabs/Structures/Infrastructure/Naval/Piers/Pier_02.et" {
@@ -16809,14 +16682,14 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
      EntitySlotInfo SpawnPoint {
       Enabled 0
      }
+     EntitySlotInfo InteractionHelper {
+      Offset 0 1.3 0
+      Prefab "{F835417A7BE9A555}Prefabs/Flag/InteractionHelper.et"
+     }
     }
    }
    ActionsManagerComponent "{628325B27ECAC8F5}" {
-    additionalActions {
-     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
-      Duration 30
-     }
-    }
+    Enabled 0
    }
   }
   coords 1690.535 417.52 1112.227
@@ -16856,14 +16729,14 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
      EntitySlotInfo SpawnPoint {
       Enabled 0
      }
+     EntitySlotInfo InteractionHelper {
+      Offset 0 1.3 0
+      Prefab "{F835417A7BE9A555}Prefabs/Flag/InteractionHelper.et"
+     }
     }
    }
    ActionsManagerComponent "{628325B27ECAC8F5}" {
-    additionalActions {
-     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
-      Duration 30
-     }
-    }
+    Enabled 0
    }
   }
   coords 1778.985 414.248 1146.232
@@ -16903,14 +16776,14 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
      EntitySlotInfo SpawnPoint {
       Enabled 0
      }
+     EntitySlotInfo InteractionHelper {
+      Offset 0 1.3 0
+      Prefab "{F835417A7BE9A555}Prefabs/Flag/InteractionHelper.et"
+     }
     }
    }
    ActionsManagerComponent "{628325B27ECAC8F5}" {
-    additionalActions {
-     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
-      Duration 30
-     }
-    }
+    Enabled 0
    }
   }
   coords 1873.303 416.256 1158.307
@@ -16946,11 +16819,7 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
  Flag_5 {
   components {
    ActionsManagerComponent "{628325B27ECAC8F5}" {
-    additionalActions {
-     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
-      Duration 30
-     }
-    }
+    Enabled 0
    }
   }
   coords 2006.046 434.376 1027.265
@@ -16977,12 +16846,14 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
  }
  Flag_1 {
   components {
-   ActionsManagerComponent "{628325B27ECAC8F5}" {
-    additionalActions {
-     SCR_AP6_TakeFlagAction "{628325BCAA21E37C}" {
-      Duration 30
+   SlotManagerComponent "{628325B2556427B6}" {
+    Slots {
+     EntitySlotInfo InteractionHelper {
      }
     }
+   }
+   ActionsManagerComponent "{628325B27ECAC8F5}" {
+    Enabled 0
    }
   }
   coords 1499.975 404.688 1124.575
@@ -17008,7 +16879,7 @@ $grp SCR_AP6_Flag : "{A61A5101558AC25A}Prefabs/Flag/Flag.et" {
  }
 }
 SCR_DestructibleTreeV2 : "{A83F0099BBAD5BE5}Prefabs/Vegetation/Tree/Dst/t_picea_abies_1f_dst.et" {
- coords 1661.881 -0 1102.054
+ coords 1661.881 0 1102.054
 }
 GenericEntity : "{A9CF5E8C5D91C476}Prefabs/Compositions/Misc/SubCompositions/Decorations/Barrel_Group_Crate_01.et" {
  coords 1689.135 416.219 1124.939
@@ -17016,6 +16887,14 @@ GenericEntity : "{A9CF5E8C5D91C476}Prefabs/Compositions/Misc/SubCompositions/Dec
 Vehicle UAZ469_covered_CIV_VAK1 : "{B2CC137FE424B129}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_VAK.et" {
  coords 1684.746 406.75 1207.533
  angleY 73.367
+}
+Vehicle Ural4320_tanker_CIV_pohona1 : "{B3C8EC88E7782C78}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker_CIV_pohona.et" {
+ components {
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   Enabled 0
+  }
+ }
+ coords 1869.723 412.211 1188.086
 }
 GenericEntity : "{B724309521EEFC42}Prefabs/Props/Agriculture/WaterTank_01_v2.et" {
  coords 1612.047 416.187 1035.158
@@ -17029,7 +16908,7 @@ GenericEntity : "{B90E5414AB7C325B}Prefabs/Props/Wrecks/BTR70_wreck_static.et" {
 }
 $grp Tree : "{BA785041AC632123}Prefabs/Vegetation/Bush/b_salix_cinerea_1.et" {
  {
-  coords 1625.169 -0 1054.417
+  coords 1625.169 0 1054.417
  }
  {
   coords 1851.341 0 1209.116
@@ -17041,14 +16920,14 @@ $grp Tree : "{BA785041AC632123}Prefabs/Vegetation/Bush/b_salix_cinerea_1.et" {
  }
 }
 Tree : "{C145F8B2D8F96863}Prefabs/Vegetation/Bush/b_juniperus_communis_2s.et" {
- coords 1927.529 -0 1186.104
+ coords 1927.529 0 1186.104
 }
 GenericEntity : "{C51A49ACBB2EF063}Prefabs/Props/Construction/ContainerMetal_01/ContainerMetal_01_blue.et" {
  coords 1786.29 413.656 1156.744
  angleY -15.392
 }
 Tree : "{C98A6C1C2372354E}Prefabs/Vegetation/Bush/b_corylus_avellana_1.et" {
- coords 1813.285 -0 1089.604
+ coords 1813.285 0 1089.604
 }
 GenericEntity : "{CEA239D9E1899899}Prefabs/Props/Garbage/Tires/TirePile_01_small.et" {
  coords 1665.703 410.472 1153.118
@@ -17083,6 +16962,9 @@ GenericEntity : "{DE658AC78172D02E}Prefabs/Props/Construction/GarbageStack_01/Ga
 }
 Vehicle Mi8MT_unarmed_transport1 : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
  components {
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "RUSSIA"
+  }
   ActionsManagerComponent "{C97BE5489221AE18}" {
    Enabled 0
   }
@@ -17091,6 +16973,25 @@ Vehicle Mi8MT_unarmed_transport1 : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopte
  angleX 0.538
  angleY 70.346
  angleZ 2.589
+}
+$grp StaticModelEntity : "{DF649B29EC7635F3}Prefabs/Structures/Military/Fortifications/DirtPile_01/DirtPile_01_small.et" {
+ {
+  coords 1690.512 -0.025 1112.232
+ }
+ {
+  coords 1778.943 -0.039 1146.229
+  angleY -38.173
+ }
+ {
+  coords 1873.286 -0.012 1158.329
+  angleY 91.473
+ }
+ {
+  coords 1499.925 -0.016 1124.579
+ }
+ {
+  coords 2006.014 -0.104 1027.236
+ }
 }
 GenericEntity : "{E641FDA9C7D9AA72}Prefabs/Props/Construction/WoodHolder_01.et" {
  coords 1683.416 406.75 1220.52
@@ -17124,11 +17025,11 @@ $grp Tree : "{F0B4F9601CEF4BE3}Prefabs/Vegetation/Tree/t_alnus_glutinosa_3s.et" 
   coords 1729.475 0 1219.197
  }
  {
-  coords 1705.635 -0 1007.703
+  coords 1705.635 0 1007.703
  }
 }
 Tree : "{F4C920FCE86AD599}Prefabs/Vegetation/Tree/t_picea_abies_0.et" {
- coords 1663.739 -0 1101.236
+ coords 1663.739 0 1101.236
 }
 Tree : "{F89B942712FD22D6}Prefabs/Vegetation/Tree/t_carpinus_betulus_2s.et" {
  coords 1681.379 0 1230.054

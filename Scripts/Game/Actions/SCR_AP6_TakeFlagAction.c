@@ -7,7 +7,7 @@ class SCR_AP6_TakeFlagAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent) 
 	{
-		m_flag = SCR_AP6_Flag.Cast(pOwnerEntity);
+		m_flag = SCR_AP6_Flag.Cast(pOwnerEntity.GetParent());
 		m_rplComponent = RplComponent.Cast(pOwnerEntity.FindComponent(RplComponent));
 	}
 
@@ -17,7 +17,7 @@ class SCR_AP6_TakeFlagAction : ScriptedUserAction
 	{
 		if (m_rplComponent && m_rplComponent.IsProxy()) return;
 
-		SCR_AP6_Flag flag = SCR_AP6_Flag.Cast(pOwnerEntity);
+		SCR_AP6_Flag flag = SCR_AP6_Flag.Cast(pOwnerEntity.GetParent());
 
 		FactionAffiliationComponent userAffiliationComponent = FactionAffiliationComponent.Cast(pUserEntity.FindComponent(FactionAffiliationComponent));
 		flag.captureFlagServer(userAffiliationComponent.GetAffiliatedFactionKey());
