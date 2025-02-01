@@ -27,7 +27,7 @@ class SCR_AP6_MapMarkerEntryDynamic : SCR_MapMarkerEntryDynamic
 		FactionAffiliationComponent faffComp = FactionAffiliationComponent.Cast(player.FindComponent(FactionAffiliationComponent));
 		
 		ResourceName resName;
-		switch (faffComp.GetAffiliatedFactionKey())
+		switch (faffComp.GetDefaultAffiliatedFaction().GetFactionKey())
 		{
 			case "RUSSIA": resName = m_ussr_imageset; break;
 			case "NATO": resName = m_us_imageset; break;

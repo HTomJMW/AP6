@@ -24,15 +24,9 @@ SCR_AP6_Flag {
     EntitySlotInfo SpawnPoint {
      Prefab "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
     }
-    EntitySlotInfo InteractionHelper {
-     Offset 0 1.3 0
-     Prefab "{F835417A7BE9A555}Prefabs/Flag/InteractionHelper.et"
-     DisablePhysicsInteraction 1
-    }
    }
   }
   ActionsManagerComponent "{628325B27ECAC8F5}" {
-   Enabled 0
    ActionContexts {
     UserActionContext "{628325BCB5FBB46B}" {
      ContextName "FlagContext"

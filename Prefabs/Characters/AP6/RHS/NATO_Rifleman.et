@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_US_USMC_Player.et" {
+SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NATO_Player.et" {
  ID "5242B7AE16596FB8"
  components {
   FactionAffiliationComponent "{520EC961FB0A2E90}" {
@@ -8,20 +8,20 @@ SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Confli
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Rifleman"
     Icon "{AE53796BC5D21A08}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_Rifleman.edds"
-    m_sFaction "NATO"
-    m_aAuthoredLabels {
-     70 2
-    }
    }
    m_VariantData SCR_EditableEntityVariantData "{60F6B2B4BAE04806}" {
-    m_bRandomizeDefaultVariant 0
+    m_aVariants {
+     SCR_EditableEntityVariant "{60F6B2B4B9D3CC9B}" {
+      m_bEnabled 0
+     }
+    }
    }
   }
   CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
    WeaponTemplate "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   WeaponTemplate "{068C2EB42635973F}Prefabs/Weapons/Rifles/M4A1/Rifle_M4A1_RAS.et"
+   WeaponTemplate "{D2C367D173B99BCC}Prefabs/Weapons/Rifles/M4A1/Rifle_M4_RAS.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
    WeaponTemplate "{E998FA484B0C4BFF}Prefabs/Weapons/Handguns/Glock/Handgun_Glock17.et"

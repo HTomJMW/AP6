@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{9B452A52081470E3}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_USSR_MSV_Player.et" {
+SCR_ChimeraCharacter : "{9B452A52081470E3}Prefabs/Characters/AP6/RHS/Default_RUSSIA_Player.et" {
  ID "5242B7AE8EF4D733"
  components {
   FactionAffiliationComponent "{520EC9618276DF23}" {
@@ -8,16 +8,16 @@ SCR_ChimeraCharacter : "{9B452A52081470E3}Prefabs/Characters/Campaign/RHS/Confli
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Autorifleman"
     Icon "{EF1F445746A3391A}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_MachineGunner.edds"
-    m_sFaction "RUSSIA"
-    m_aAuthoredLabels {
-     70 2
-    }
     m_aAutoLabels {
      122 43
     }
    }
    m_VariantData SCR_EditableEntityVariantData "{60F6B83ED4C13CC3}" {
-    m_bRandomizeDefaultVariant 0
+    m_aVariants {
+     SCR_EditableEntityVariant "{60F6B83ED3FB7538}" {
+      m_bEnabled 0
+     }
+    }
    }
   }
   CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
@@ -42,8 +42,7 @@ SCR_ChimeraCharacter : "{9B452A52081470E3}Prefabs/Characters/Campaign/RHS/Confli
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{5ED519BE78FF2BBE}" {
-     PrefabsToSpawn + {
-      "{B343AB76B0725657}Prefabs/Items/Equipment/Radios/Radio_R187P1_OLD.et"
+     PrefabsToSpawn +{
      }
     }
     ItemsInitConfigurationItem "{5ED519BE771B5ECB}" {

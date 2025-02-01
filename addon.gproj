@@ -7,20 +7,6 @@ GameProject {
  }
  Configurations {
   GameProjectConfig PC {
-   DefaultSettings EngineUserSettings "{5702F087A781A9FC}" {
-    AudioSettings AudioSettings "{644D0102933B52FD}" {
-    }
-    ClusteredTilingUserSettings ClusteredTilingUserSettings "{644D01028FE4CF77}" {
-    }
-    ResourceManagerUserSettings ResourceManagerUserSettings "{644D01028D617EB7}" {
-    }
-    UserInterfaceSettings UserInterfaceSettings "{644D01028C345BBE}" {
-    }
-    WaterPoolMaterialSettings WaterPoolMaterialSettings "{644D01028A754493}" {
-    }
-   }
-   WetnessRenderSettings WetnessRenderSettings "{644D010297193D47}" {
-   }
   }
   GameProjectConfig XBOX_ONE {
   }

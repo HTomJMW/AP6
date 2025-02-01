@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Conflict/Campaign_US_USMC_Player.et" {
+SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/AP6/RHS/Default_NATO_Player.et" {
  ID "5242B7AE16596FB8"
  components {
   FactionAffiliationComponent "{520EC961FB0A2E90}" {
@@ -8,16 +8,16 @@ SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Confli
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Sniper"
     Icon "{0A78405E73C36477}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_Sharpshooter.edds"
-    m_sFaction "NATO"
-    m_aAuthoredLabels {
-     70 2
-    }
     m_aAutoLabels {
      122 47
     }
    }
    m_VariantData SCR_EditableEntityVariantData "{60F6B2B4BAE04806}" {
-    m_bRandomizeDefaultVariant 0
+    m_aVariants {
+     SCR_EditableEntityVariant "{60F6B2B4B9D3CC9B}" {
+      m_bEnabled 0
+     }
+    }
    }
   }
   CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
@@ -43,20 +43,12 @@ SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Confli
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
-    ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
-     PrefabsToSpawn + {
-      "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
-     }
-    }
     ItemsInitConfigurationItem "{54A49B42D138207E}" {
      PrefabsToSpawn + {
       "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et"
      }
     }
     ItemsInitConfigurationItem "{5538C040738A83D1}" {
-     PrefabsToSpawn {
-      "{DEDC311A2B0F9235}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855A1_Last_5Tracer.et" "{DEDC311A2B0F9235}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855A1_Last_5Tracer.et" "{DEDC311A2B0F9235}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855A1_Last_5Tracer.et"
-     }
     }
     ItemsInitConfigurationItem "{5538C040737C0BE0}" {
      PrefabsToSpawn +{
