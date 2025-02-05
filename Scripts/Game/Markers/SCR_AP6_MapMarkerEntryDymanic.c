@@ -80,7 +80,9 @@ class SCR_AP6_MapMarkerEntryDynamic : SCR_MapMarkerEntryDynamic
 			case "RUSSIA": imgset = m_ussr_imageset; break;
 			case "NATO": imgset = m_us_imageset; break;
 		}
-			
+
+		if (!imgset) return;
+
 		color = faction.GetFactionColor();
 	
 		string iconQuad = "infantry";

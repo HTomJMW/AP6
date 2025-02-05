@@ -16,9 +16,6 @@ SCR_ChimeraCharacter : "{8B567897680EB9FA}Prefabs/Characters/Campaign/RHS/Confli
      122 41
     }
    }
-   m_VariantData SCR_EditableEntityVariantData "{60F6B2B4BAE04806}" {
-    m_bRandomizeDefaultVariant 0
-   }
   }
   CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
    WeaponTemplate "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"

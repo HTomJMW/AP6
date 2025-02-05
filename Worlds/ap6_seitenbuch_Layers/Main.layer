@@ -1,7 +1,8 @@
-SCR_AIWorld SCR_AIWorld_Seitenbuch : "{73CC9F4E14194957}Prefabs/AI/SCR_AIWorld_Seitenbuch.et" {
- coords 0 0 0
+SCR_AIWorld : "{73CC9F4E14194957}Prefabs/AI/SCR_AIWorld_Seitenbuch.et" {
+ coords 1464.356 408.262 1310.003
 }
 RadioManagerEntity RadioManagerEntity {
+ coords 1467.98 407.684 1310.412
 }
 SCR_AP6_GameMode SCR_AP6_GameMode {
  components {
@@ -411,6 +412,8 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
   }
   SCR_AP6_VictoryComponent "{628503793A3621FC}" {
   }
+  SCR_AdditionalGameModeSettingsComponent "{6482ED5D5891E7B4}" {
+  }
   SCR_ArsenalManagerComponent "{6286FC7D53C899C0}" {
   }
   SCR_CallsignManagerComponent "{627D1B77908048BE}" {
@@ -418,6 +421,15 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
   SCR_CampaignBuildingManagerComponent "{6286FC74161D1973}" {
    m_sFreeRoamBuildingServerTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
    m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
+   m_BudgetType CAMPAIGN
+   m_iCompositionRefundPercentage 100
+   m_OutlineManager SCR_CampaignBuildingCompositionOutlineManager "{6482ED5CB776C929}" {
+   }
+   m_sPrefabsToBuildResource "{D2527D9AA5B4A33E}Configs/Editor/PlaceableEntities/Compositions/Compositions_FreeRoamBuilding.conf"
+  }
+  SCR_CommandingManagerComponent "{6482ED5C86793736}" {
+  }
+  SCR_CompositionSlotManagerComponent "{6482ED5CFCB7B0DC}" {
   }
   SCR_DataCollectorComponent "{627D1B7790804901}" {
    m_aModules {
@@ -463,6 +475,18 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
     }
    }
   }
+  SCR_DebriefingScreenComponent "{6482ED5CEED5E517}" {
+   m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{6482ED5CE7176A28}" {
+    m_TopLeftTile SCR_DebriefingScreenBigImageContent "{6482ED5CDEDF12BA}" {
+    }
+    m_TopRightTile SCR_DebriefingScreenFinishedObjectivesContent "{6482ED5CD4DDEA55}" {
+    }
+    m_BottomLeftTile SCR_DebriefingScreenSummaryContent "{6482ED5CD019E81E}" {
+    }
+    m_BottomRightTile SCR_DebriefingScreenStatisticsContent "{6482ED5CCD5EBE31}" {
+    }
+   }
+  }
   SCR_DestructionManagerComponent "{627D1B7790804903}" {
   }
   SCR_EntityCatalogManagerComponent "{6285455B39D7EBEB}" {
@@ -470,11 +494,27 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
     SCR_EntityCatalog "{6287159EF645F7AE}" {
      m_eEntityCatalogType SUPPLY_CONTAINER_ITEM
     }
+    SCR_EntityCatalogMultiList "{6482ED5C35E3F061}" {
+     m_eEntityCatalogType CHARACTER
+    }
+    SCR_EntityCatalogMultiList "{6482ED5C341C267A}" {
+     m_eEntityCatalogType VEHICLE
+    }
+    SCR_EntityCatalogMultiList "{6482ED5C335680FC}" {
+     m_eEntityCatalogType GROUP
+    }
+    SCR_EntityCatalogMultiList "{6482ED5C2F27DCA0}" {
+     m_eEntityCatalogType WEAPONS_TRIPOD
+    }
+    SCR_EntityCatalogMultiList "{6482ED5C2E6FD112}" {
+     m_eEntityCatalogType ITEM
+    }
    }
   }
   SCR_GameGameModeStateComponent "{6482952AE552BEA7}" {
   }
   SCR_GameModeHealthSettings "{627D1B7790804988}" {
+   m_bPermitUnconsciousVON 1
   }
   SCR_GameOverScreenManagerComponent "{627D1B779080C512}" {
    m_GameOverScreenConfig SCR_GameOverScreenConfig "{627D1B779080C50D}" {
@@ -1500,6 +1540,9 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
   }
   SCR_PlayerListedAdminManagerComponent "{627D1B779080DC9C}" {
   }
+  SCR_PlayerSpawnPointManagerComponent "{6482ED5C4501E52A}" {
+   m_bEnablePlayerSpawnPoints 0
+  }
   SCR_PlayersRestrictionZoneManagerComponent "{627D1B779080DC90}" {
   }
   SCR_PossessingManagerComponent "{627D1B779080DC93}" {
@@ -1546,6 +1589,9 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
   SCR_RespawnTimerComponent "{6288F8033ACF81B1}" {
   }
   SCR_ScoringSystemComponent "{6482952A65D7C083}" {
+  }
+  SCR_SpawnProtectionComponent "{6482ED5F8BBDD636}" {
+   m_fProtectionTime 3
   }
   SCR_SpawnerAIGroupManagerComponent "{627D1B779080DC39}" {
   }
@@ -1649,6 +1695,7 @@ SCR_AP6_GameMode SCR_AP6_GameMode {
    Streamable Disabled
   }
  }
+ coords 1463.415 408.362 1311.047
  Flags 0
  m_eTestGameFlags 6
  m_bAllowFactionChange 0
@@ -1664,9 +1711,10 @@ SCR_FactionManager CampaignFactionManager {
    Streamable Disabled
   }
  }
+ coords 1466.573 407.95 1309.436
  Flags 0
  Factions {
-  SCR_CampaignFaction "{627D1B7E802A8FE5}" {
+  SCR_Faction "{627D1B7E802A8FE5}" {
    FactionKey "RUSSIA"
    FactionColor 0.855 0.031 0.028 1
    UIInfo SCR_FactionUIInfo "{627D1B7E80D4316F}" {
@@ -2720,6 +2768,27 @@ SCR_FactionManager CampaignFactionManager {
     SCR_EntityCatalogMultiList "{627D1B7E80DAF8D3}" {
      m_eEntityCatalogType CHARACTER
      m_aEntityEntryList {
+      SCR_EntityCatalogEntry "{648ADC9B0F4D892B}" {
+       m_sEntityPrefab "{F6ACF00F5EF87393}Prefabs/Characters/AP6/RHS/RUSSIA_Rifleman.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9B745347FA}" {
+       m_sEntityPrefab "{2F58991548D9C9E6}Prefabs/Characters/AP6/RHS/RUSSIA_GL.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9B720E4DAB}" {
+       m_sEntityPrefab "{228DE734BF6EA0CC}Prefabs/Characters/AP6/RHS/RUSSIA_AR.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9B7020ACED}" {
+       m_sEntityPrefab "{709A392ED121B42F}Prefabs/Characters/AP6/RHS/RUSSIA_MG.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9B585DDDB2}" {
+       m_sEntityPrefab "{685D4FA3497E0C0B}Prefabs/Characters/AP6/RHS/RUSSIA_Medic.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9B56751D84}" {
+       m_sEntityPrefab "{26111BEC16D45B8B}Prefabs/Characters/AP6/RHS/RUSSIA_Sharpshooter.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9B5426134B}" {
+       m_sEntityPrefab "{30A6F484B2A6EA70}Prefabs/Characters/AP6/RHS/RUSSIA_SavedGear.et"
+      }
       SCR_EntityCatalogEntry "{627D1B7E80D563E3}" {
        m_sEntityPrefab "{7DE1CBA32A0225EB}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Randomized.et"
        m_aEntityDataList {
@@ -6071,15 +6140,8 @@ SCR_FactionManager CampaignFactionManager {
      m_iSignalIndex 39
     }
    }
-   m_DefendersGroupPrefab "{359353A0A5A52216}Prefabs/Groups/Campaign/Group_USSR_Defenders.et"
-   m_aStartingVehicles {
-    "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
-   }
-   m_MobileHQPrefab "{E171C9F443958371}Prefabs/MP/Campaign/Assets/CampaignMobileAssemblyEast.et"
-   m_RadioPrefab "{54C68E438DD34265}Prefabs/Items/Equipment/Radios/Radio_R107M.et"
-   m_BaseBuildingHQ "{847605BB95F1F066}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_Headquarters_S_USSR_01.et"
   }
-  SCR_CampaignFaction "{627D1B7E803D6C21}" {
+  SCR_Faction "{627D1B7E803D6C21}" {
    FactionKey "NATO"
    FactionColor 0.016 0.552 0.905 1
    UIInfo SCR_FactionUIInfo "{627D1B7E802A8FC9}" {
@@ -7139,6 +7201,27 @@ SCR_FactionManager CampaignFactionManager {
     SCR_EntityCatalogMultiList "{627D1B7E802DFA7A}" {
      m_eEntityCatalogType CHARACTER
      m_aEntityEntryList {
+      SCR_EntityCatalogEntry "{648ADC9AAE5E95E4}" {
+       m_sEntityPrefab "{8FFE63B4DF00341A}Prefabs/Characters/AP6/RHS/NATO_Rifleman.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9AAC4C9C6D}" {
+       m_sEntityPrefab "{C41CB557680680E9}Prefabs/Characters/AP6/RHS/NATO_GL.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9AAA3A5DB1}" {
+       m_sEntityPrefab "{C9C9CB769FB1E9C3}Prefabs/Characters/AP6/RHS/NATO_AR.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9AA86023FC}" {
+       m_sEntityPrefab "{9BDE156CF1FEFD20}Prefabs/Characters/AP6/RHS/NATO_MG.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9AA7AC55D9}" {
+       m_sEntityPrefab "{EBD489E1D3147D7C}Prefabs/Characters/AP6/RHS/NATO_Medic.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9AB0D2C784}" {
+       m_sEntityPrefab "{B5706D2D6675111C}Prefabs/Characters/AP6/RHS/NATO_Sniper.et"
+      }
+      SCR_EntityCatalogEntry "{648ADC9AFEB5F45B}" {
+       m_sEntityPrefab "{C2E1E971A4C02343}Prefabs/Characters/AP6/RHS/NATO_SavedGear.et"
+      }
       SCR_EntityCatalogEntry "{627D1B7E802A688E}" {
        m_sEntityPrefab "{5EFC243926EE6808}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Randomized.et"
        m_aEntityDataList {
@@ -10663,15 +10746,8 @@ SCR_FactionManager CampaignFactionManager {
      m_iSignalIndex 39
     }
    }
-   m_DefendersGroupPrefab "{D4A1576757665D02}Prefabs/Groups/Campaign/Group_US_Defenders.et"
-   m_aStartingVehicles {
-    "{3F2AA823B6C65E1E}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_MERDC.et" "{DD774A8FD0989A78}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_MERDC.et" "{DD774A8FD0989A78}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_MERDC.et"
-   }
-   m_MobileHQPrefab "{9CB496688A3BCC3E}Prefabs/MP/Campaign/Assets/CampaignMobileAssemblyWest.et"
-   m_RadioPrefab "{9B6B61BB3FE3DFB0}Prefabs/Items/Equipment/Radios/Radio_ANPRC77.et"
-   m_BaseBuildingHQ "{9771776551C306E0}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_Headquarters_S_US_01.et"
   }
-  SCR_CampaignFaction "{627D1B7E80064A56}" {
+  SCR_Faction "{627D1B7E80064A56}" {
    FactionKey "FIA"
    FactionColor 0 0.44 0.078 1
    UIInfo SCR_FactionUIInfo "{627D1B7E803D6C06}" {
@@ -12848,8 +12924,6 @@ SCR_FactionManager CampaignFactionManager {
     "infantry" "amphibious" "anti-air" "anti-air-artilery" "anti-armor-motorized" "antiarmor" "armored" "artillery" "combined" "helicopter" "helicopter-attack" "infantry-air" "machinegun" "maintenance" "medical" "mortar" "motorized" "motorized-infantry" "recon" "recon-motorized" "signal" "sniper" "supply-motorized" "undefined"
    }
    m_sFactionBackground "{81BF3B1DCC106577}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_FIA.imageset"
-   m_BaseBuildingHQ "{7CB2EB208F93C6D4}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_Headquarters_S_FIA_01.et"
-   m_BaseBuildingSupplyDepot "{E8B6339148792C0E}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_SupplyCache_S_FIA_01.et"
   }
   SCR_Faction "{627D1B7E8010DAC7}" {
    FactionKey "CIV"
@@ -15817,6 +15891,7 @@ ScriptedChatEntity ScriptedChatEntity {
    Streamable Disabled
   }
  }
+ coords 1455.852 409.388 1310.352
  Channels {
   BaseChatChannel "{627D1B7589AAC506}" {
    "Channel name" "Global"
@@ -15843,11 +15918,13 @@ ScriptedChatEntity ScriptedChatEntity {
  "Default channel" "Faction"
 }
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
- coords 0 0 0
+ coords 1468.134 407.888 1302.982
 }
 BasePreloadManager BasePreloadManager {
+ coords 1464.664 407.937 1324.352
 }
 ItemPreviewManagerEntity ItemPreviewManagerEntity {
+ coords 1469.754 407.392 1311.689
  PreviewWorld "{4391FE7994EE6FE2}Prefabs/World/Game/InventoryPreviewWorld.et"
  DefaultRenderAttributes SCR_CharacterInventoryPreviewAttributes "{648295295EC667C6}" {
  }
@@ -15858,6 +15935,7 @@ SCR_LoadoutManager SCR_LoadoutManager {
    Streamable Disabled
   }
  }
+ coords 1463.699 408.376 1308.675
  Flags 0
  m_aPlayerLoadouts {
   SCR_PlayerArsenalLoadout "{644F10DD6AEC57AF}" {
@@ -15933,6 +16011,7 @@ SCR_LoadoutManager SCR_LoadoutManager {
  }
 }
 SCR_MapLocator SCR_MapLocator {
+ coords 1474.897 406.755 1307.583
  m_WorldDirections SCR_MapLocationQuadHint "{627D1B74647DB3E0}" {
  }
 }
@@ -15942,6 +16021,7 @@ SCR_PopUpNotification SCR_PopupNotification {
    Streamable Disabled
   }
  }
+ coords 1457.667 409.424 1295.203
 }
 StaticModelEntity : "{01E409EF2B75692E}Prefabs/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_medium_base.et" {
  coords 1756.23 421.726 1032.085
